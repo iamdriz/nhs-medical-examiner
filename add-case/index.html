@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<section class="nhsuk-section nhsuk-section--white">
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
+
+      <h1 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-3">Add a new case</h1>
+      <h2 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">Primary information</h2>
+
+      <form id="add-case" method="POST" action="">
+
+        {% include _person.html %}
+
+        <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+          <div class="nhsuk-grid-column-one-half">
+            <button class="nhsuk-button" type="submit">
+              Create case and continue
+            </button>
+          </div>
+        </div>
+
+      </form>
+
+      <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+        <div class="nhsuk-grid-column-one-half">
+          <h3 class="">Adding multiple cases at once?</h3>
+          <a class="nhsuk-button nhsuk-button--secondary" href='./'>
+            Add another case
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
