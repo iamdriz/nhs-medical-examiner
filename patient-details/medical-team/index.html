@@ -64,57 +64,6 @@ layout: default
           </div>
         </div>
         <!-- // CONSULTANT 1 -->
-        <!-- CONSULTANT 2 -->
-        <div class="consultant nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6" id="consultant2">
-          <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-one-half">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="consultant2_name">
-                  Other consultant involved in care
-                </label>
-                <input class="nhsuk-input" id="consultant2_name" name="consultant2_name" type="text">
-              </div>
-            </div>
-            <div class="nhsuk-grid-column-one-half">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="consultant2_role">
-                  Role
-                </label>
-                <input class="nhsuk-input" id="consultant2_role" name="consultant2_role" type="text">
-              </div>
-            </div>
-          </div>
-          <div class="nhsuk-grid-row">
-            <div class="nhsuk-grid-column-one-half">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="consultant2_organisation">
-                  Organisation
-                </label>
-                <input class="nhsuk-input" id="consultant2_organisation" name="consultant2_organisation" type="text">
-              </div>
-              <a data-show="#note-box2" class="js-link">Add a note</a>
-            </div>
-            <div class="nhsuk-grid-column-one-half">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="consultant2_number">
-                  Personal phone / bleep number
-                </label>
-                <input class="nhsuk-input" id="consultant2_number" name="consultant2_number" type="text">
-              </div>
-            </div>
-          </div>
-          <div id="note-box2" class="nhsuk-grid-row hide">
-            <div class="nhsuk-grid-column-full">
-              <div class="nhsuk-form-group">
-                <label class="nhsuk-label" for="consultant2_notes">
-                  Additional notes
-                </label>
-                <textarea class="nhsuk-textarea" id="consultant2_notes" name="consultant2_notes" rows="5"></textarea>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- // CONSULTANT 2 -->
       </div>
 
       <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
@@ -123,9 +72,9 @@ layout: default
            class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
             Add another consultant
           </button>
-          <button class="nhsuk-button nhsuk-button--secondary" data-remove-element=".consultant" data-remove-from="#consultants">
+          <!--<button class="nhsuk-button nhsuk-button--secondary" data-remove-element=".consultant" data-remove-from="#consultants">
             Remove consultant above
-          </button>
+          </button>-->
         </div>
       </div>
 
@@ -354,6 +303,17 @@ layout: default
           </label>
           <textarea class="nhsuk-textarea" id="consultant{number}_notes" name="consultant{number}_notes" rows="5"></textarea>
         </div>
+      </div>
+    </div>
+    <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+      <div class="nhsuk-grid-column-full">
+        <!--<button data-duplicate-element=".consultant" data-duplicate-from="#consultant-template" data-duplicate-to="#consultants"
+         class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+          Add another consultant
+        </button>-->
+        <button class="nhsuk-button nhsuk-button--secondary" data-remove-element="#consultant{number}">
+          Remove consultant above
+        </button>
       </div>
     </div>
   </div>

@@ -71,7 +71,8 @@
     </div>
     <div class="nhsuk-checkboxes">
       <div class="nhsuk-checkboxes__item">
-        <input data-unknown="#nhs_number" class="nhsuk-checkboxes__input" id="nhs_number_unknown" name="nhs_number_unknown" type="checkbox" value="">
+        <input data-unknown="#nhs_number" class="nhsuk-checkboxes__input" id="nhs_number_unknown" name="nhs_number_unknown"
+          type="checkbox" value="">
         <label class="nhsuk-label nhsuk-checkboxes__label" for="nhs_number_unknown">
           Unknown
         </label>
@@ -85,13 +86,23 @@
       </label>
       <input class="nhsuk-input" id="hospital_number" name="hospital_number" type="text" placeholder="Optional">
     </div>
-    <a id="show-hospital2" class="nhsuk-u-margin-top-3 js-link">Add another</a>
-    <!-- hospital 2 appears after clicking add another -->
-    <div class="nhsuk-form-group nhsuk-form-group--hidden">
-      <label class="nhsuk-label" for="hospital_number2">
-        Hospital number 2
-      </label>
-      <input class="nhsuk-input" id="hospital_number2" name="hospital_number2" type="text">
+    <a data-show="#hospital_number2_group" class="nhsuk-u-margin-top-3 js-link">Add another</a>
+    <div id="hospital_number2_group" class="hide">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="hospital_number2">
+          Hospital number 2
+        </label>
+        <input class="nhsuk-input" id="hospital_number2" name="hospital_number2" type="text">
+      </div>
+      <a data-show="#hospital_number3_group" class="nhsuk-u-margin-top-3 js-link">Add another</a>
+    </div>
+    <div class="hide" id="hospital_number3_group">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="hospital_number3">
+          Hospital number 3
+        </label>
+        <input class="nhsuk-input" id="hospital_number3" name="hospital_number3" type="text">
+      </div>
     </div>
   </div>
 </div>
@@ -111,8 +122,8 @@
               <label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
                 Day
               </label>
-              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day"
-                type="number" pattern="[0-9]*" required>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number"
+                pattern="[0-9]*" required>
             </div>
           </div>
           <div class="nhsuk-date-input__item">
@@ -135,6 +146,15 @@
           </div>
         </div>
       </fieldset>
+    </div>
+    <div class="nhsuk-checkboxes">
+      <div class="nhsuk-checkboxes__item">
+        <input data-unknown="#HERE" class="nhsuk-checkboxes__input" id="dob_unknown" name="dob_unknown" type="checkbox"
+          value="">
+        <label class="nhsuk-label nhsuk-checkboxes__label" for="dob_unknown">
+          Unknown
+        </label>
+      </div>
     </div>
   </div>
   <div class="nhsuk-grid-column-one-half">
@@ -176,6 +196,15 @@
             </div>
           </fieldset>
         </div>
+        <div class="nhsuk-checkboxes">
+          <div class="nhsuk-checkboxes__item">
+            <input data-unknown="#HERE" class="nhsuk-checkboxes__input" id="dod_unknown" name="dod_unknown" type="checkbox"
+              value="">
+            <label class="nhsuk-label nhsuk-checkboxes__label" for="dod_unknown">
+              Unknown
+            </label>
+          </div>
+        </div>
       </div>
       <div class="nhsuk-grid-column-one-third">
         <div class="nhsuk-form-group">
@@ -199,11 +228,13 @@
       <label class="nhsuk-label" for="time_of_death">
         Time of death
       </label>
-      <input placeholder="15:31" class="nhsuk-input nhsuk-input--width-5" id="time_of_death" name="time_of_death" type="text" required>
+      <input placeholder="15:31" class="nhsuk-input nhsuk-input--width-5" id="time_of_death" name="time_of_death" type="text"
+        required>
     </div>
     <div class="nhsuk-checkboxes">
       <div class="nhsuk-checkboxes__item">
-        <input data-unknown="#time_of_death" class="nhsuk-checkboxes__input" id="time_of_death_unknown" name="time_of_death_unknown" type="checkbox" value="">
+        <input data-unknown="#time_of_death" class="nhsuk-checkboxes__input" id="time_of_death_unknown" name="time_of_death_unknown"
+          type="checkbox" value="">
         <label class="nhsuk-label nhsuk-checkboxes__label" for="time_of_death_unknown">
           Unknown
         </label>
@@ -242,7 +273,8 @@
     </div>
     <div class="nhsuk-checkboxes">
       <div class="nhsuk-checkboxes__item">
-        <input class="nhsuk-checkboxes__input" id="me_office_out_of_hours" name="me_office_out_of_hours" type="checkbox" value="">
+        <input class="nhsuk-checkboxes__input" id="me_office_out_of_hours" name="me_office_out_of_hours" type="checkbox"
+          value="">
         <label class="nhsuk-label nhsuk-checkboxes__label" for="me_office_out_of_hours">
           Out of hours/urgent scrutiny has already taken place on this case.
         </label>

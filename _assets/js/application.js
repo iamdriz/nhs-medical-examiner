@@ -11,16 +11,6 @@ $(document).on('change', '[name="gender"]', function () {
     formGroup.addClass(cssClass);
 });
 
-// show hospital 2 if add another is clicked
-$(document).on('click', '#show-hospital2', function (e) {
-  e.preventDefault();
-  var element = $(this);
-  var formGroup = $('#hospital_number2').parents('.nhsuk-form-group');
-  var cssClass = 'nhsuk-form-group--hidden';
-  formGroup.removeClass(cssClass);
-  element.remove();
-});
-
 // disable input if unknown checked
 $(document).on('change', '[data-unknown]', function () {
   var target = $(this).attr('data-unknown');
@@ -96,11 +86,9 @@ $(document).on('click', '[data-duplicate-from]', function() {
 });
 
 // remove forms
-$(document).on('click', '[data-remove-from]', function() {
-  var from = $(this).attr('data-remove-from');
+$(document).on('click', '[data-remove-element]', function() {
   var element = $(this).attr('data-remove-element');
-  if($(element).length > 1)
-    $(from).find(element).last().remove();
+  $(element).remove();
 })
 
 // show/hide more details if value YES selected
@@ -122,4 +110,25 @@ $(document).on('change', '[name="personal_effects"]', function () {
     formGroup.removeClass(cssClass);
   else
     formGroup.addClass(cssClass);
+});
+
+$(document).on('change', '[data-toggle-button]', function () {
+  var button = $(this).attr('data-toggle-button');
+  if ($(this).is(':checked'))
+    $(button).removeAttr('disabled');
+  else
+    $(button).attr('disabled', 'disabled');
+});
+
+$(document).on('change', '#mccd_issued, #gp_notification', function(){
+  var mccd_issued = $('#mccd_issued');
+  var gp_notification = $('#gp_notification');
+  var button = $('#submit_close_case');
+  if($(mccd_issued).is(':checked') && $(gp_notification).is(':checked')) {
+    $(button).removeAttr('disabled');
+    $(button).parents('.nhsuk-box').removeClass('nhsuk-box--disabled');
+  } else {
+    $(button).attr('disabled', 'disabled');
+    $(button).parents('.nhsuk-box').addClass('nhsuk-box--disabled');
+  }
 });

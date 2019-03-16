@@ -319,7 +319,7 @@ layout: default
 
           <div class="nhsuk-checkboxes">
             <div class="nhsuk-checkboxes__item">
-              <input class="nhsuk-checkboxes__input" id="confirm_scrutiny" name="confirm_scrutiny" type="checkbox"
+              <input data-toggle-button="#submit_confirmation_of_scrutiny" class="nhsuk-checkboxes__input" id="confirm_scrutiny" name="confirm_scrutiny" type="checkbox"
                 value="">
               <label class="nhsuk-label nhsuk-checkboxes__label" for="confirm_scrutiny">
                 Confirm scrutiny
@@ -328,7 +328,7 @@ layout: default
           </div>
 
           <div class="nhsuk-u-margin-top-6">
-            <button class="nhsuk-button nhsuk-button--primary">
+            <button id="submit_confirmation_of_scrutiny" class="nhsuk-button nhsuk-button--primary" disabled="disabled">
               Submit
             </button>
           </div>
@@ -375,14 +375,13 @@ layout: default
           <p>Has a cremation form been completed for this death?</p>
           <div class="nhsuk-radios">
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="cremation_form_yes" name="cremation_form" type="radio" value="yes"
-                checked>
+              <input class="nhsuk-radios__input" id="cremation_form_yes" name="cremation_form" type="radio" value="yes">
               <label class="nhsuk-label nhsuk-radios__label" for="cremation_form_yes">
                 Yes
               </label>
             </div>
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="cremation_form_no" name="cremation_form" type="radio" value="no">
+              <input class="nhsuk-radios__input" id="cremation_form_no" name="cremation_form" type="radio" value="no" checked>
               <label class="nhsuk-label nhsuk-radios__label" for="cremation_form_no">
                 No
               </label>
@@ -409,25 +408,19 @@ layout: default
       <div class="nhsuk-box nhsuk-box--disabled">
         <div class="nhsuk-grid-row nhsuk-grid-row--align-center">
           <div class="nhsuk-grid-column-one-half">
-
             <h3>Close case</h3>
-
             <div class="nhsuk-u-margin-top-6">
-              <button class="nhsuk-button nhsuk-button--primary" type="submit">
+              <button id="submit_close_case" class="nhsuk-button nhsuk-button--primary" disabled="disabled">
                 Close case
               </button>
             </div>
-
           </div>
           <div class="nhsuk-grid-column-one-half">
-
             <div class="nhsuk-box__text">
               A case can only be closed once all items have been actioned.
             </div>
-
           </div>
         </div>
-
       </div>
 
     </div>
