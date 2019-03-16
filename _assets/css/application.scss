@@ -84,6 +84,9 @@
 .nhsuk-textarea[disabled] {
   background-color: #999 !important;
 }
+.nhsuk-checkboxes__input[disabled] + .nhsuk-checkboxes__label:before {
+  background: #999 !important;
+}
 
 .checklist {
   display: flex;

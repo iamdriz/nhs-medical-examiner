@@ -14,11 +14,32 @@ $(document).on('change', '[name="gender"]', function () {
 // disable input if unknown checked
 $(document).on('change', '[data-unknown]', function () {
   var target = $(this).attr('data-unknown');
-  if ($(this).is(':checked')) {
-    $(target).val('').attr('disabled', true);
-  } else {
-    $(target).removeAttr('disabled');
+  target = target.split(',');
+  for (var i = 0; i < target.length; i++) {
+    if ($(this).is(':checked')) {
+      $(target[i]).val('').attr('disabled', true);
+    } else {
+      $(target[i]).removeAttr('disabled');
+    }
   }
+});
+
+// disable unknown checkbox if inputs have value
+$(document).ready(function(){
+  $('[data-disable-if-value]').each(function () {
+    var element = $(this);
+    var target = $(element).attr('data-disable-if-value');
+    target = target.split(',');
+    for (var i = 0; i < target.length; i++) {
+      $(target[i]).on('keyup blur focus copy paste', function () {
+        if ($(this).val() == '') {
+          $(element).attr('checked', false).removeAttr('disabled');
+        } else {
+          $(element).attr('checked', false).attr('disabled', true);
+        }
+      });
+    }
+  });
 });
 
 $(document).ready(function () {
@@ -68,25 +89,25 @@ $(document).on('click', '[data-toggle]', function () {
 });
 
 // show extra boxes
-$(document).on('click', '[data-show]', function() {
+$(document).on('click', '[data-show]', function () {
   var target = $(this).attr('data-show');
   $(this).remove();
   $(target).removeClass('hide');
 });
 
 // duplicate forms
-$(document).on('click', '[data-duplicate-from]', function() {
+$(document).on('click', '[data-duplicate-from]', function () {
   var element = $(this).attr('data-duplicate-element');
   var from = $(this).attr('data-duplicate-from');
   var to = $(this).attr('data-duplicate-to');
   var html = $(from).clone().html();
-  var count = $(element).length+1;
+  var count = $(element).length + 1;
   html = html.replace(/{number}/g, count);
   $(to).append(html);
 });
 
 // remove forms
-$(document).on('click', '[data-remove-element]', function() {
+$(document).on('click', '[data-remove-element]', function () {
   var element = $(this).attr('data-remove-element');
   $(element).remove();
 })
@@ -120,11 +141,11 @@ $(document).on('change', '[data-toggle-button]', function () {
     $(button).attr('disabled', 'disabled');
 });
 
-$(document).on('change', '#mccd_issued, #gp_notification', function(){
+$(document).on('change', '#mccd_issued, #gp_notification', function () {
   var mccd_issued = $('#mccd_issued');
   var gp_notification = $('#gp_notification');
   var button = $('#submit_close_case');
-  if($(mccd_issued).is(':checked') && $(gp_notification).is(':checked')) {
+  if ($(mccd_issued).is(':checked') && $(gp_notification).is(':checked')) {
     $(button).removeAttr('disabled');
     $(button).parents('.nhsuk-box').removeClass('nhsuk-box--disabled');
   } else {
