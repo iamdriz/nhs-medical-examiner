@@ -179,6 +179,7 @@ $(document).on('change', '#mccd_issued, #gp_notification', function () {
 // timeline events
 $(document).on('change', '#timeline_event_template', function(){
   var template = $(this).val();
-  template = $('#' + template).clone().html();
+  if(template != '')
+    template = $('#' + template).clone().html();
   $('#eventTemplateHTML').html(template);
 });
