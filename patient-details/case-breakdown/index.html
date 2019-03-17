@@ -48,7 +48,7 @@ layout: default
   <div class="nhsuk-width-container">
     <div class="nhsuk-main-wrapper">
 
-      <div class="timeline">
+      <div id="events" class="timeline">
         <div id="event1" class="timeline__item timeline__item--grey">
           <div class="timeline__item__number">1</div>
           <div class="timeline__item__content">
@@ -184,31 +184,100 @@ layout: default
 
 <!-- EVENT TEMPLATES-->
 <template id="latestAdmissionNotesEventTemplate">
-
-</template>
-
-<template id="mePreScrutinyEventTemplate">
-
-</template>
-
-<template id="qapDiscussionEventTemplate">
-
-</template>
-
-<template id="bereavedDiscussionEventTemplate">
-
+  <div id="event{number}" class="timeline__item timeline__item--blue1">
+    <div class="timeline__item__number">{number}</div>
+    <div class="timeline__item__content">
+      <h3 class="timeline__item__header">Admission notes</h3>
+      <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id fugit vero harum numquam voluptatum voluptas
+        similique tenetur quae, fugiat nostrum, sed quasi maxime tempora unde eius sequi? Exercitationem, non minima.</p>
+      <p><a class="js-link" data-amend="#event{number}">Amend event</a></p>
+    </div>
+  </div>
 </template>
 
 <template id="medicalHistoryEventTemplate">
-
+  <div id="event{number}" class="timeline__item timeline__item--blue2">
+    <div class="timeline__item__number">{number}</div>
+    <div class="timeline__item__content">
+      <h3 class="timeline__item__header">Medical history</h3>
+      <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda blanditiis ad sapiente commodi consequatur
+        magnam veniam esse iste adipisci pariatur nihil similique facilis cumque minus qui, accusantium deleniti
+        voluptate architecto?</p>
+      <p><a class="js-link" data-amend="#event{number}">Amend event</a></p>
+    </div>
+  </div>
 </template>
 
 <template id="meoSummaryEventTemplate">
+  <div id="event{number}" class="timeline__item timeline__item--ocean">
+    <div class="timeline__item__number">{number}</div>
+    <div class="timeline__item__content">
+      <h3 class="timeline__item__header">MEO summary</h3>
+      <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit pariatur officiis consectetur officia natus
+        quisquam ullam eveniet corrupti, doloribus voluptates veritatis? Fugiat rerum, dignissimos unde aliquam ab
+        suscipit rem nulla?</p>
+      <p><a class="js-link" data-amend="#event{number}">Amend event</a></p>
+    </div>
+  </div>
+</template>
 
+<template id="mePreScrutinyEventTemplate">
+  <div id="event{number}" class="timeline__item timeline__item--orange">
+    <div class="timeline__item__number">{number}</div>
+    <div class="timeline__item__content">
+      <h3 class="timeline__item__header">ME pre-scrutiny</h3>
+      <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, similique doloremque possimus repellat
+        laboriosam exercitationem molestias obcaecati eaque adipisci aut magnam laborum nostrum! Incidunt, accusantium
+        ea quasi quisquam non veniam.</p>
+      <p><a class="js-link" data-amend="#event{number}">Amend event</a></p>
+    </div>
+  </div>
+</template>
+
+<template id="qapDiscussionEventTemplate">
+  <div id="event{number}" class="timeline__item timeline__item--purple">
+    <div class="timeline__item__number">{number}</div>
+    <div class="timeline__item__content">
+      <h3 class="timeline__item__header">QAP discussion</h3>
+      <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, dolorem corporis? Consectetur alias ex fuga
+        sit cupiditate deleniti possimus aliquam suscipit, excepturi voluptas harum modi, fugit velit accusantium rerum
+        aperiam.</p>
+      <p><a class="js-link" data-amend="#event{number}">Amend event</a></p>
+    </div>
+  </div>
+</template>
+
+<template id="bereavedDiscussionEventTemplate">
+  <div id="event{number}" class="timeline__item timeline__item--green">
+    <div class="timeline__item__number">{number}</div>
+    <div class="timeline__item__content">
+      <h3 class="timeline__item__header">Bereaved/representative discussion</h3>
+      <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam sit aperiam necessitatibus eaque, eius
+        asperiores recusandae quia accusamus, ut earum, quod voluptate explicabo quidem natus possimus sapiente aut
+        nemo? Soluta.</p>
+      <p><a class="js-link" data-amend="#event{number}">Amend event</a></p>
+    </div>
+  </div>
 </template>
 
 <template id="otherCaseEventTemplate">
-
+  <div id="event{number}" class="timeline__item timeline__item--pink">
+    <div class="timeline__item__number">{number}</div>
+    <div class="timeline__item__content">
+      <h3 class="timeline__item__header">Other case info</h3>
+      <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus maxime quo exercitationem amet
+        quaerat accusamus saepe, rerum totam beatae omnis quod magnam quas repellendus eaque quae culpa dignissimos
+        enim similique!</p>
+      <p><a class="js-link" data-amend="#event{number}">Amend event</a></p>
+    </div>
+  </div>
 </template>
 <!-- // ITEM TEMPLATES -->
 
@@ -334,7 +403,63 @@ layout: default
   <!-- // LATEST ADMISSION NOTES -->
   <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
     <div class="nhsuk-grid-column-full">
-      <button class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+      <button data-add-event="#latestAdmissionNotesEventTemplate" class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+        Add event to timeline
+      </button>
+      <button class="nhsuk-button nhsuk-button--secondary">
+        Save as draft
+      </button>
+    </div>
+  </div>
+</template>
+
+<template id="medicalHistoryFormTemplate">
+  <!-- MEDICAL HISTORY NOTES -->
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="medical_history_notes">
+          Medical history
+        </label>
+        <span class="nhsuk-hint">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </span>
+        <textarea class="nhsuk-textarea" id="medical_history_notes" name="medical_history_notes" rows="5"></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- // MEDICAL HISTORY NOTES -->
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+    <div class="nhsuk-grid-column-full">
+      <button data-add-event="#medicalHistoryEventTemplate" class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+        Add event to timeline
+      </button>
+      <button class="nhsuk-button nhsuk-button--secondary">
+        Save as draft
+      </button>
+    </div>
+  </div>
+</template>
+
+<template id="meoSummaryFormTemplate">
+  <!-- MEO SUMMARY -->
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="meo_summary">
+          MEO summary
+        </label>
+        <span class="nhsuk-hint">
+          Summarise the key information about this case
+        </span>
+        <textarea class="nhsuk-textarea" id="meo_summary" name="meo_summary" rows="5"></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- // MEO SUMMARY -->
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+    <div class="nhsuk-grid-column-full">
+      <button data-add-event="#meoSummaryEventTemplate" class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
         Add event to timeline
       </button>
       <button class="nhsuk-button nhsuk-button--secondary">
@@ -526,7 +651,7 @@ layout: default
   <!-- // ME PRE SCRUTINY -->
   <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
     <div class="nhsuk-grid-column-full">
-      <button class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+      <button data-add-event="#mePreScrutinyEventTemplate" class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
         Add event to timeline
       </button>
       <button class="nhsuk-button nhsuk-button--secondary">
@@ -545,7 +670,7 @@ layout: default
       <button class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
         Add event to timeline
       </button>
-      <button class="nhsuk-button nhsuk-button--secondary">
+      <button data-add-event="#qapDiscussionEventTemplate" class="nhsuk-button nhsuk-button--secondary">
         Save as draft
       </button>
     </div>
@@ -558,63 +683,7 @@ layout: default
   <!-- // BEREAVED DISCUSSION -->
   <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
     <div class="nhsuk-grid-column-full">
-      <button class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
-        Add event to timeline
-      </button>
-      <button class="nhsuk-button nhsuk-button--secondary">
-        Save as draft
-      </button>
-    </div>
-  </div>
-</template>
-
-<template id="medicalHistoryFormTemplate">
-  <!-- MEDICAL HISTORY NOTES -->
-  <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
-    <div class="nhsuk-grid-column-full">
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="medical_history_notes">
-          Medical history
-        </label>
-        <span class="nhsuk-hint">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        </span>
-        <textarea class="nhsuk-textarea" id="medical_history_notes" name="medical_history_notes" rows="5"></textarea>
-      </div>
-    </div>
-  </div>
-  <!-- // MEDICAL HISTORY NOTES -->
-  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
-    <div class="nhsuk-grid-column-full">
-      <button class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
-        Add event to timeline
-      </button>
-      <button class="nhsuk-button nhsuk-button--secondary">
-        Save as draft
-      </button>
-    </div>
-  </div>
-</template>
-
-<template id="meoSummaryFormTemplate">
-  <!-- MEO SUMMARY -->
-  <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
-    <div class="nhsuk-grid-column-full">
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="meo_summary">
-          MEO summary
-        </label>
-        <span class="nhsuk-hint">
-          Summarise the key information about this case
-        </span>
-        <textarea class="nhsuk-textarea" id="meo_summary" name="meo_summary" rows="5"></textarea>
-      </div>
-    </div>
-  </div>
-  <!-- // MEO SUMMARY -->
-  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
-    <div class="nhsuk-grid-column-full">
-      <button class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+      <button data-add-event="#bereavedDiscussionEventTemplate" class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
         Add event to timeline
       </button>
       <button class="nhsuk-button nhsuk-button--secondary">
@@ -639,7 +708,7 @@ layout: default
   <!-- // OTHER CASE INFO -->
   <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
     <div class="nhsuk-grid-column-full">
-      <button class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+      <button data-add-event="#otherCaseEventTemplate" class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
         Add event to timeline
       </button>
       <button class="nhsuk-button nhsuk-button--secondary">

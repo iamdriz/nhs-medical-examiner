@@ -183,3 +183,14 @@ $(document).on('change', '#timeline_event_template', function(){
     template = $('#' + template).clone().html();
   $('#eventTemplateHTML').html(template);
 });
+
+// add event to timeline
+$(document).on('click', '[data-add-event]', function() {
+  var template = $(this).attr('data-add-event');
+  template = $(template).clone().html();
+  var count = $('.timeline__item').length + 1;
+  template = template.replace(/{number}/g, count);
+  $('#events').append(template);
+  $('#timeline_event_template').val('');
+  $('#eventTemplateHTML').html('');
+});
