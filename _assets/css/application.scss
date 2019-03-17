@@ -243,19 +243,21 @@
 
 .timeline {
   position: relative;
-  padding-left: 44px;
-  padding-top: 48px;
-  padding-bottom: 48px;
-  margin-top: -48px !important;
-  margin-bottom: -48px !important;
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: #aeb7bc;
+  @media (min-width: 40.0625em) {
+    padding-left: 44px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    margin-top: -48px !important;
+    margin-bottom: -48px !important;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #aeb7bc;
+    }
   }
   .timeline__item {
     background: #ffffff;
@@ -273,16 +275,18 @@
     &:last-child {
       margin-bottom: 0;
     }
-    &:before {
-      content: '';
-      position: absolute;
-      left: -46px;
-      top: 50%;
-      transform: translateX(-11px) translateY(-50%);
-      width: 18px;
-      height: 18px;
-      background: #aeb7bc;
-      border-radius: 9px;
+    @media (min-width: 40.0625em) {
+      &:before {
+        content: '';
+        position: absolute;
+        left: -46px;
+        top: 50%;
+        transform: translateX(-11px) translateY(-50%);
+        width: 18px;
+        height: 18px;
+        background: #aeb7bc;
+        border-radius: 9px;
+      }
     }
     .timeline__item__number {
       font-size: 32px;
