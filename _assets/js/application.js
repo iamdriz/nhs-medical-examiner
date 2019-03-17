@@ -25,7 +25,7 @@ $(document).on('change', '[data-unknown]', function () {
 });
 
 // disable unknown checkbox if inputs have value
-$(document).ready(function(){
+$(document).ready(function () {
   $('[data-disable-if-value]').each(function () {
     var element = $(this);
     var target = $(element).attr('data-disable-if-value');
@@ -41,6 +41,28 @@ $(document).ready(function(){
     }
   });
 });
+
+// work out age from dob and dod
+$(document).on('keyup blur focus copy paste',
+  '#dob-day,#dob-month,#dob-year,#dod-day,#dod-month,#dod-year', function () {
+    var dobDay = $('#dob-day').val();
+    var dobMonth = $('#dob-month').val();
+    var dobYear = $('#dob-year').val();
+    var dodDay = $('#dod-day').val();
+    var dodMonth = $('#dod-month').val();
+    var dodYear = $('#dod-year').val();
+    if (dobDay != '' && dobMonth != '' && dobYear != '' && dodDay != '' && dodMonth != '' && dodYear != '') {
+      var dateOfBirth = moment([dobYear, dobMonth, dobDay]);
+      var dateOfDeath = moment([dodYear, dodMonth, dodDay]);
+      var age = dateOfDeath.diff(dateOfBirth, 'years');
+      if (Number.isInteger(age) && age > 0)
+        $('#age').html(age)
+      else
+        $('#age').html(0);
+    } else {
+      $('#age').html(0);
+    }
+  });
 
 $(document).ready(function () {
   // prevent forms from actually submitting
@@ -152,4 +174,11 @@ $(document).on('change', '#mccd_issued, #gp_notification', function () {
     $(button).attr('disabled', 'disabled');
     $(button).parents('.nhsuk-box').addClass('nhsuk-box--disabled');
   }
+});
+
+// timeline events
+$(document).on('change', '#timeline_event_template', function(){
+  var template = $(this).val();
+  template = $('#' + template).clone().html();
+  $('#eventTemplateHTML').html(template);
 });

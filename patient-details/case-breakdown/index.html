@@ -6,12 +6,626 @@ layout: default
 
 <section class="nhsuk-section nhsuk-section--white">
 
-    <div class="nhsuk-width-container">
-      <div class="nhsuk-main-wrapper">
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
 
-        <p>Coming soon.</p>
+      <h2 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-0">Case breakdown</h2>
 
+      <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-0">
+        <div class="nhsuk-grid-column-one-quarter">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="timeline_filter">
+              Filter
+            </label>
+            <select class="nhsuk-select" id="timeline_filter" name="timeline_filter" required>
+              <option value="" selected>Filter by</option>
+              <option value="itemTemplate1">All events</option>
+              <option value="itemTemplate2">My events</option>
+            </select>
+          </div>
+        </div>
+        <div class="nhsuk-grid-column-one-quarter">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="timeline_sort">
+              Sort
+            </label>
+            <select class="nhsuk-select" id="timeline_sort" name="timeline_sort" required>
+              <option value="" selected>Sort by</option>
+              <option value="itemTemplate1">Newest</option>
+              <option value="itemTemplate2">Oldest</option>
+            </select>
+          </div>
+        </div>
       </div>
+
     </div>
+  </div>
 
 </section>
+
+<section class="nhsuk-section">
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
+
+      <div class="timeline">
+        <div id="event1" class="timeline__item timeline__item--grey">
+          <div class="timeline__item__number">1</div>
+          <div class="timeline__item__content">
+            <h3 class="timeline__item__header">Event Title</h3>
+            <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia cum culpa illum! Et rem totam
+              accusantium quia neque itaque, temporibus optio veritatis aut, dolorum a, nam quod sequi unde.</p>
+            <p><a class="js-link" data-amend="#event4">Amend event</a></p>
+          </div>
+        </div>
+        <div id="event2" class="timeline__item timeline__item--green">
+          <div class="timeline__item__number">2</div>
+          <div class="timeline__item__content">
+            <h3 class="timeline__item__header">Event Title</h3>
+            <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia cum culpa illum! Et rem totam
+              accusantium quia neque itaque, temporibus optio veritatis aut, dolorum a, nam quod sequi unde.</p>
+            <p><a class="js-link" data-amend="#event1">Amend event</a></p>
+          </div>
+        </div>
+        <div id="event3" class="timeline__item timeline__item--blue1 timeline__item--expanded">
+          <div class="timeline__item__number">3</div>
+          <div class="timeline__item__content">
+            <h3 class="timeline__item__header">Event Title</h3>
+            <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia cum culpa illum! Et rem totam
+              accusantium quia neque itaque, temporibus optio veritatis aut, dolorum a, nam quod sequi unde.</p>
+            <p><a class="js-link" data-amend="#event2">Amend event</a></p>
+          </div>
+        </div>
+        <div id="event4" class="timeline__item timeline__item--blue2">
+          <div class="timeline__item__number">4</div>
+          <div class="timeline__item__content">
+            <h3 class="timeline__item__header">Event Title</h3>
+            <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia cum culpa illum! Et rem totam
+              accusantium quia neque itaque, temporibus optio veritatis aut, dolorum a, nam quod sequi unde.</p>
+            <p><a class="js-link" data-amend="#event3">Amend event</a></p>
+          </div>
+        </div>
+        <div id="event5" class="timeline__item timeline__item--pink">
+          <div class="timeline__item__number">5</div>
+          <div class="timeline__item__content">
+            <h3 class="timeline__item__header">Event Title</h3>
+            <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia cum culpa illum! Et rem totam
+              accusantium quia neque itaque, temporibus optio veritatis aut, dolorum a, nam quod sequi unde.</p>
+            <p><a class="js-link" data-amend="#event4">Amend event</a></p>
+          </div>
+        </div>
+        <div id="event6" class="timeline__item timeline__item--orange">
+          <div class="timeline__item__number">6</div>
+          <div class="timeline__item__content">
+            <h3 class="timeline__item__header">Event Title</h3>
+            <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia cum culpa illum! Et rem totam
+              accusantium quia neque itaque, temporibus optio veritatis aut, dolorum a, nam quod sequi unde.</p>
+            <p><a class="js-link" data-amend="#event4">Amend event</a></p>
+          </div>
+        </div>
+        <div id="event7" class="timeline__item timeline__item--purple">
+          <div class="timeline__item__number">7</div>
+          <div class="timeline__item__content">
+            <h3 class="timeline__item__header">Event Title</h3>
+            <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia cum culpa illum! Et rem totam
+              accusantium quia neque itaque, temporibus optio veritatis aut, dolorum a, nam quod sequi unde.</p>
+            <p><a class="js-link" data-amend="#event4">Amend event</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<section class="nhsuk-section nhsuk-section--white">
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-main-wrapper">
+
+      <h2 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">Add a new timeline event or continue editing a draft</h2>
+
+      <!-- TIMELINE EVENTS -->
+      <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+        <div class="nhsuk-grid-column-one-half">
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="timeline_event_template">
+              ---
+            </label>
+            <select class="nhsuk-select" id="timeline_event_template" name="timeline_event_template" required>
+              <option value="" selected>Select an event</option>
+              <option value="latestAdmissionNotesFormTemplate">Latest admission notes</option>
+              <option value="mePreScrutinyFormTemplate">ME pre scrutiny</option>
+              <option value="qapDiscussionFormTemplate">QAP discussion</option>
+              <option value="bereavedDiscussionFormTemplate">Bereaved/representative discussion</option>
+              <option value="medicalHistoryFormTemplate">Medical history notes</option>
+              <option value="meoSummaryFormTemplate">MEO summary</option>
+              <option value="otherCaseFormTemplate">Other case info</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- // TIMELINE EVENTS -->
+
+      <div id="eventTemplateHTML"></div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- EVENT TEMPLATES-->
+<template id="latestAdmissionNotesEventTemplate">
+
+</template>
+
+<template id="mePreScrutinyEventTemplate">
+
+</template>
+
+<template id="qapDiscussionEventTemplate">
+
+</template>
+
+<template id="bereavedDiscussionEventTemplate">
+
+</template>
+
+<template id="medicalHistoryEventTemplate">
+
+</template>
+
+<template id="meoSummaryEventTemplate">
+
+</template>
+
+<template id="otherCaseEventTemplate">
+
+</template>
+<!-- // ITEM TEMPLATES -->
+
+<!-- FORM TEMPLATES -->
+<template id="latestAdmissionNotesFormTemplate">
+  <!-- LATEST ADMISSION NOTES -->
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-one-half">
+      <h3 class="nhsuk-u-margin-bottom-1">Latest admission details</h3>
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="admission-hint" role="group">
+          <!--<legend class="nhsuk-fieldset__legend">
+            Latest admission details
+          </legend>-->
+          <span class="nhsuk-hint">
+            When was the patient admitted to hospital?
+          </span>
+          <div class="nhsuk-date-input">
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="admission-day">
+                  Day
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="admission-day" name="admission-day"
+                  type="number" pattern="[0-9]*" required>
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="admission-month">
+                  Month
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="admission-month" name="admission-month"
+                  type="number" pattern="[0-9]*" required>
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="admission-year">
+                  Year
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="admission-year" name="admission-year"
+                  type="number" pattern="[0-9]*" required>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="nhsuk-checkboxes">
+        <div class="nhsuk-checkboxes__item">
+          <input data-disable-if-value="#admission-day,#admission-month,#admission-year" data-unknown="#admission-day,#admission-month,#admission-year"
+            class="nhsuk-checkboxes__input" id="admission_unknown" name="admission_unknown" type="checkbox" value="">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="admission_unknown">
+            Unknown
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-u-margin-top-6 nhsuk-grid-row">
+    <div class="nhsuk-grid-column-one-half">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="admission_time">
+          Time
+        </label>
+        <input placeholder="15:31" class="nhsuk-input nhsuk-input--width-5" id="admission_time" name="admission_time"
+          type="text" required>
+      </div>
+      <div class="nhsuk-checkboxes">
+        <div class="nhsuk-checkboxes__item">
+          <input data-unknown="#admission_time" class="nhsuk-checkboxes__input" id="admission_time_unknown" name="admission_time_unknown"
+            type="checkbox" value="">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="admission_time_unknown">
+            Unknown
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="admission_notes">
+          Notes about the latest admission to hospital
+        </label>
+        <span class="nhsuk-hint">
+          Why were they admitted? What were the circumstances for admission?
+        </span>
+        <textarea class="nhsuk-textarea" id="admission_notes" name="admission_notes" rows="5"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend">
+            Do you suspect this case may need immediate coroner referral?
+          </legend>
+          <span class="nhsuk-hint">
+            This will fast track the case to ME Pre Scrutiny where they will be able to confirm the referral.
+          </span>
+          <div class="nhsuk-radios nhsuk-radios--inline">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="admission_referral_yes" name="admission_referral" type="radio"
+                value="yes" checked>
+              <label class="nhsuk-label nhsuk-radios__label" for="admission_referral_yes">
+                Yes
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="admission_referral_no" name="admission_referral" type="radio"
+                value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="admission_referral_no">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  <!-- // LATEST ADMISSION NOTES -->
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+    <div class="nhsuk-grid-column-full">
+      <button class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+        Add event to timeline
+      </button>
+      <button class="nhsuk-button nhsuk-button--secondary">
+        Save as draft
+      </button>
+    </div>
+  </div>
+</template>
+
+<template id="mePreScrutinyFormTemplate">
+  <!-- ME PRE SCRUTINY -->
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="pre_scrutiny_notes">
+          Pre-scrutiny thoughts of the Medical Examiner assigned to this case
+        </label>
+        <span class="nhsuk-hint">
+          Initial draft notes from the Medical Examiner on possible causes of death
+        </span>
+        <textarea class="nhsuk-textarea" id="pre_scrutiny_notes" name="pre_scrutiny_notes" rows="5"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend">
+            Overall circumstances of death
+          </legend>
+          <span class="nhsuk-hint">
+            Based on the information scrutinised, the death was:
+          </span>
+          <div class="nhsuk-radios">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
+                  <input class="nhsuk-radios__input" id="funeral_arrangements_cremation" name="funeral_arrangements"
+                    type="radio" value="cremation" checked>
+                  <label class="nhsuk-label nhsuk-radios__label" for="funeral_arrangements_cremation">
+                    Expected
+                  </label>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
+                  <input class="nhsuk-radios__input" id="funeral_arrangements_buried_at_sea" name="funeral_arrangements"
+                    type="radio" value="buried_at_sea">
+                  <label class="nhsuk-label nhsuk-radios__label" for="funeral_arrangements_buried_at_sea">
+                    Unexpected
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="funeral_arrangements_burial" name="funeral_arrangements" type="radio"
+                    value="burial">
+                  <label class="nhsuk-label nhsuk-radios__label" for="funeral_arrangements_burial">
+                    Sudden but not expected
+                  </label>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="funeral_arrangements_repatriation" name="funeral_arrangements"
+                    type="radio" value="repatriation">
+                  <label class="nhsuk-label nhsuk-radios__label" for="funeral_arrangements_repatriation">
+                    Part of an individualised end of life care plan
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+    <div class="nhsuk-grid-column-full">
+      <h3>Possible cause of death established during scrutiny by Medical Examiner</h3>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="pre_scrutiny_notes">
+          1a
+        </label>
+        <textarea class="nhsuk-textarea" id="pre_scrutiny_notes" name="pre_scrutiny_notes" rows="2"></textarea>
+      </div>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="pre_scrutiny_notes">
+          1b
+        </label>
+        <textarea class="nhsuk-textarea" id="pre_scrutiny_notes" name="pre_scrutiny_notes" rows="2"></textarea>
+      </div>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="pre_scrutiny_notes">
+          1c
+        </label>
+        <textarea class="nhsuk-textarea" id="pre_scrutiny_notes" name="pre_scrutiny_notes" rows="2"></textarea>
+      </div>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="pre_scrutiny_notes">
+          2
+        </label>
+        <textarea class="nhsuk-textarea" id="pre_scrutiny_notes" name="pre_scrutiny_notes" rows="2"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend">
+            Overall outcome of pre-scrutiny
+          </legend>
+          <span class="nhsuk-hint">
+            Based on the information assessed so far, the Medical Examiner believes this case would be
+          </span>
+          <div class="nhsuk-radios nhsuk-radios--inline">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="admission_referral_yes" name="admission_referral" type="radio"
+                value="yes" checked>
+              <label class="nhsuk-label nhsuk-radios__label" for="admission_referral_yes">
+                Issued an MCCD
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="admission_referral_no" name="admission_referral" type="radio"
+                value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="admission_referral_no">
+                Referred to coroner
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend">
+            Clinical governance review or learning opportunity
+          </legend>
+          <span class="nhsuk-hint">
+            Is there any reason why this case should be referred for a review?
+          </span>
+          <div class="nhsuk-radios nhsuk-radios--inline">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="admission_referral_yes" name="admission_referral" type="radio"
+                value="yes" checked>
+              <label class="nhsuk-label nhsuk-radios__label" for="admission_referral_yes">
+                Yes
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="admission_referral_no" name="admission_referral" type="radio"
+                value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="admission_referral_no">
+                No
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="admission_referral_no" name="admission_referral" type="radio"
+                value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="admission_referral_no">
+                Unknown
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="nhsuk-form-group">
+        <textarea class="nhsuk-textarea" id="pre_scrutiny_notes" name="pre_scrutiny_notes" rows="5"></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-warning-callout">
+        <h3 class="nhsuk-warning-callout__label">Disclaimer</h3>
+        <p>The information submitted is an intial view on the cause of death. It conveys only the first part of the
+          Medical Examiner's scutiny and is by no means a confirmation of how an individual died.</p>
+      </div>
+    </div>
+  </div>
+  <!-- // ME PRE SCRUTINY -->
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+    <div class="nhsuk-grid-column-full">
+      <button class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+        Add event to timeline
+      </button>
+      <button class="nhsuk-button nhsuk-button--secondary">
+        Save as draft
+      </button>
+    </div>
+  </div>
+</template>
+
+<template id="qapDiscussionFormTemplate">
+  <!-- QAP DISCUSSION -->
+  <p>TODO</p>
+  <!-- // QAP DISCUSSION -->
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+    <div class="nhsuk-grid-column-full">
+      <button class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+        Add event to timeline
+      </button>
+      <button class="nhsuk-button nhsuk-button--secondary">
+        Save as draft
+      </button>
+    </div>
+  </div>
+</template>
+
+<template id="bereavedDiscussionFormTemplate">
+  <!-- BEREAVED DISCUSSION -->
+  <p>TODO</p>
+  <!-- // BEREAVED DISCUSSION -->
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+    <div class="nhsuk-grid-column-full">
+      <button class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+        Add event to timeline
+      </button>
+      <button class="nhsuk-button nhsuk-button--secondary">
+        Save as draft
+      </button>
+    </div>
+  </div>
+</template>
+
+<template id="medicalHistoryFormTemplate">
+  <!-- MEDICAL HISTORY NOTES -->
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="medical_history_notes">
+          Medical history
+        </label>
+        <span class="nhsuk-hint">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </span>
+        <textarea class="nhsuk-textarea" id="medical_history_notes" name="medical_history_notes" rows="5"></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- // MEDICAL HISTORY NOTES -->
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+    <div class="nhsuk-grid-column-full">
+      <button class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+        Add event to timeline
+      </button>
+      <button class="nhsuk-button nhsuk-button--secondary">
+        Save as draft
+      </button>
+    </div>
+  </div>
+</template>
+
+<template id="meoSummaryFormTemplate">
+  <!-- MEO SUMMARY -->
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="meo_summary">
+          MEO summary
+        </label>
+        <span class="nhsuk-hint">
+          Summarise the key information about this case
+        </span>
+        <textarea class="nhsuk-textarea" id="meo_summary" name="meo_summary" rows="5"></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- // MEO SUMMARY -->
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+    <div class="nhsuk-grid-column-full">
+      <button class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+        Add event to timeline
+      </button>
+      <button class="nhsuk-button nhsuk-button--secondary">
+        Save as draft
+      </button>
+    </div>
+  </div>
+</template>
+
+<template id="otherCaseFormTemplate">
+  <!-- OTHER CASE INFO -->
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="other_case_info">
+          Other relevant information
+        </label>
+        <textarea class="nhsuk-textarea" id="other_case_info" name="other_case_info" rows="5"></textarea>
+      </div>
+    </div>
+  </div>
+  <!-- // OTHER CASE INFO -->
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+    <div class="nhsuk-grid-column-full">
+      <button class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+        Add event to timeline
+      </button>
+      <button class="nhsuk-button nhsuk-button--secondary">
+        Save as draft
+      </button>
+    </div>
+  </div>
+</template>
+<!-- // FORM TEMPLATES -->
