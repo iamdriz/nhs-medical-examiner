@@ -48,7 +48,7 @@ layout: default
   <div class="nhsuk-width-container">
     <div class="nhsuk-main-wrapper">
 
-      {% include patient-details/case-breakdown/_me-timeline.html %}
+      {% include patient-details/case-breakdown/_meo-timeline.html %}
 
     </div>
   </div>
@@ -74,12 +74,6 @@ layout: default
               <option data-info="" value="" selected>Select an event</option>
               <option data-info="This should cover the details of the patient's latest admission to hospital. It should cover relevant information that will help the MEO write their summary of the case."
                 value="latestAdmissionNotesFormTemplate">Latest admission notes</option>
-              <option data-info="This should be completed before the two further parts of the scrutiny process, and should detail the Medical Examiner's independant view of the cause of death based on the information available."
-                value="mePreScrutinyFormTemplate">ME pre-scrutiny</option>
-              <option data-info="This should capture the official discussion between the Medical Examiner and QAP, and it should happen after the ME has completed their pre-scrutiny. It is unable to happen at all for any reason, it should be marked below."
-                value="qapDiscussionFormTemplate">QAP discussion</option>
-              <option data-info="This should capture the official discussion between the ME and the bereaved or representative, offering them an opportunity to raise any concerns or provide additional information."
-                value="bereavedDiscussionFormTemplate">Bereaved/representative discussion</option>
               <option data-info="This should cover any relevant information about the patient's previous medical history that may be helpful for the Medical Examiner when scrutinising the death."
                 value="medicalHistoryFormTemplate">Medical history notes</option>
               <option data-info="This should provide a summary of the case information and any context to help the Medical Examiner scrutinise the death. Once it is added to the timeline, the case will be marked as 'Ready for scrutiny'."
