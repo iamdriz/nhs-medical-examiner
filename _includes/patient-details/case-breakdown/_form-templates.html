@@ -380,7 +380,249 @@
 
 <template id="qapDiscussionFormTemplate">
   <!-- QAP DISCUSSION -->
-  <p>TODO</p>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-one-half">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="full_name">
+          Full name
+        </label>
+        <input class="nhsuk-input" id="full_name" name="full_name" type="text" required="required">
+      </div>
+    </div>
+    <div class="nhsuk-grid-column-one-half">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="role">
+          Role
+        </label>
+        <input class="nhsuk-input" id="role" name="role" type="text" required="required">
+      </div>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-one-half">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="organisation">
+          Organisation
+        </label>
+        <input class="nhsuk-input" id="organisation" name="organisation" type="text" required="required">
+      </div>
+    </div>
+    <div class="nhsuk-grid-column-one-half">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="phone_number">
+          Personal phone / bleep number
+        </label>
+        <input class="nhsuk-input" id="phone_number" name="phone_number" type="text" required="required">
+      </div>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-one-half">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
+          <legend class="nhsuk-fieldset__legend">
+            Date of birth
+          </legend>
+          <div class="nhsuk-date-input" id="dob">
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="dob-day">
+                  Day
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day"
+                  type="number" pattern="[0-9]*" required>
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="dob-month">
+                  Month
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month"
+                  type="number" pattern="[0-9]*" required>
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="dob-year">
+                  Year
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year"
+                  type="number" pattern="[0-9]*" required>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="time_of_conversation">
+          Time
+        </label>
+        <input placeholder="15:31" class="nhsuk-input nhsuk-input--width-5" id="time_of_conversation" name="time_of_conversation"
+          type="text" required>
+      </div>
+    </div>
+    <div class="nhsuk-grid-column-one-half">
+      <div class="nhsuk-checkboxes nhsuk-u-margin-top-8">
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="dod_unknown" name="dod_unknown" type="checkbox" value="">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="dod_unknown">
+            Tick if this discussion was unable to happen at all
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="nhsuk-gray-panel">
+    <p>Cause of death established during scrutiny by Medical Examiner and QAP</p>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-third">
+        <h3 class="nhsuk-u-margin-bottom-0">Dr Tia Sanchez</h3>
+        <p>ME</p>
+      </div>
+      <div class="nhsuk-grid-column-one-third">
+        <h3 class="nhsuk-u-margin-bottom-0">Jim Broadsmith</h3>
+        <p>QAP</p>
+      </div>
+      <div class="nhsuk-grid-column-one-third">
+        <p>22/02/19</p>
+      </div>
+    </div>
+    <h4>It is proposed that James Gould died from:</h4>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="cause_of_death1a">
+            1a
+          </label>
+          <input class="nhsuk-input" id="cause_of_death1a" name="cause_of_death1a" type="text">
+        </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="cause_of_death1b">
+            1b
+          </label>
+          <input class="nhsuk-input" id="cause_of_death1b" name="cause_of_death1b" type="text">
+        </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="cause_of_death1c">
+            1c
+          </label>
+          <input class="nhsuk-input" id="cause_of_death1c" name="cause_of_death1c" type="text">
+        </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="cause_of_death2">
+            2
+          </label>
+          <input class="nhsuk-input" id="cause_of_death2" name="cause_of_death2" type="text">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <h3>Details of discussion with QAP and ME</h3>
+  <div class="nhsuk-form-group">
+    <!-- <label class="nhsuk-label" for="summary_of_discussion">
+      Details of discussion with QAP and ME
+    </label> -->
+    <textarea class="nhsuk-textarea" id="summary_of_discussion" name="summary_of_discussion" rows="10" required></textarea>
+  </div>
+
+
+  <h3>Outcomes of discussion</h3>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend">
+            What was officially decided by the ME and QAP?
+          </legend>
+          <div class="nhsuk-radios nhsuk-radios--inline">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gender_male" name="gender" type="radio" value="male" checked>
+              <label class="nhsuk-label nhsuk-radios__label" for="gender_male">
+                MCCD to be issued
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gender_female" name="gender" type="radio" value="female">
+              <label class="nhsuk-label nhsuk-radios__label" for="gender_female">
+                Refer to coroner
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend">
+            What was decided about the cause of death?
+          </legend>
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gender_male" name="gender" type="radio" value="male" checked>
+              <label class="nhsuk-label nhsuk-radios__label" for="gender_male">
+                Cause of death provided by the QAP before scrutiny accepted without change
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gender_female" name="gender" type="radio" value="female">
+              <label class="nhsuk-label nhsuk-radios__label" for="gender_female">
+                Cause of death established by ME accepted by QAP
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gender_female" name="gender" type="radio" value="female">
+              <label class="nhsuk-label nhsuk-radios__label" for="gender_female">
+                ME and QAP have agreed a new cause of death
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+    <div class="nhsuk-grid-column-full">
+      <h3>Revised cause of death agreed</h3>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="pre_scrutiny_notes">
+          1a
+        </label>
+        <textarea class="nhsuk-textarea" id="pre_scrutiny_notes" name="pre_scrutiny_notes" rows="2"></textarea>
+      </div>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="pre_scrutiny_notes">
+          1b
+        </label>
+        <textarea class="nhsuk-textarea" id="pre_scrutiny_notes" name="pre_scrutiny_notes" rows="2"></textarea>
+      </div>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="pre_scrutiny_notes">
+          1c
+        </label>
+        <textarea class="nhsuk-textarea" id="pre_scrutiny_notes" name="pre_scrutiny_notes" rows="2"></textarea>
+      </div>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="pre_scrutiny_notes">
+          2
+        </label>
+        <textarea class="nhsuk-textarea" id="pre_scrutiny_notes" name="pre_scrutiny_notes" rows="2"></textarea>
+      </div>
+    </div>
+  </div>
+
   <!-- // QAP DISCUSSION -->
   <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
     <div class="nhsuk-grid-column-full">
