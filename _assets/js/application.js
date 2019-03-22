@@ -188,7 +188,7 @@ $(document).on('change', '#timeline_event_template', function(){
   else
     $('#eventTemplateInfo').html('');
   $('html, body').animate({
-      scrollTop: $("#eventTemplateHTML").offset().top
+      scrollTop: $("#timeline-section").offset().top
   }, 0);
 });
 
@@ -206,6 +206,11 @@ $(document).on('click', '[data-add-event]', function() {
   template = template.replace(/{number}/g, count);
   $('#events').append(template);
   $('#timeline_event_template').val('').change().selectric('refresh');
+});
+
+// expanded
+$(document).on('click', '[data-expandable]', function(){
+  $(this).toggleClass('timeline__item--expanded');
 });
 
 $(document).ready(function () {

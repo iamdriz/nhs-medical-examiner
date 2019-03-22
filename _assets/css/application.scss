@@ -326,6 +326,17 @@
         margin-bottom: 0;
       }
     }
+    .timeline__item__main {
+      display: none;
+    }
+    &.timeline__item--expanded {
+      .timeline__item__teaser {
+        display: none;
+      }
+      .timeline__item__main {
+        display: block;
+      }
+    }
     // grey
     &.timeline__item--grey {
       border-left-color: #425562;
