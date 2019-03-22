@@ -65,7 +65,7 @@ layout: default
             <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia cum culpa illum! Et rem totam
               accusantium quia neque itaque, temporibus optio veritatis aut, dolorum a, nam quod sequi unde.</p>
-            <p><a class="js-link" data-amend="#event4">Amend event</a></p>
+            <p><a class="js-link" data-amend-event="latestAdmissionNotesFormTemplate">Amend event</a></p>
           </div>
         </div>
         <div id="event3" class="timeline__item timeline__item--blue2 timeline__item--expanded">
@@ -83,7 +83,7 @@ layout: default
               ipsum dolor sit amet consectetur adipisicing elit. Doloremque minus optio nostrum! Dolor, officia tenetur
               dolore harum nobis cupiditate fuga alias iusto aliquam placeat. Deleniti rerum cupiditate quo officiis
               eos.</p>
-            <p><a class="js-link" data-amend="#event2">Amend event</a></p>
+            <p><a class="js-link" data-amend-event="medicalHistoryFormTemplate">Amend event</a></p>
           </div>
         </div>
         <div id="event4" class="timeline__item timeline__item--ocean">
@@ -93,7 +93,7 @@ layout: default
             <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia cum culpa illum! Et rem totam
               accusantium quia neque itaque, temporibus optio veritatis aut, dolorum a, nam quod sequi unde.</p>
-            <p><a class="js-link" data-amend="#event3">Amend event</a></p>
+            <p><a class="js-link" data-amend-event="meoSummaryFormTemplate">Amend event</a></p>
           </div>
         </div>
         <div id="event5" class="timeline__item timeline__item--orange">
@@ -103,7 +103,7 @@ layout: default
             <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia cum culpa illum! Et rem totam
               accusantium quia neque itaque, temporibus optio veritatis aut, dolorum a, nam quod sequi unde.</p>
-            <p><a class="js-link" data-amend="#event4">Amend event</a></p>
+            <p><a class="js-link" data-amend-event="mePreScrutinyFormTemplate">Amend event</a></p>
           </div>
         </div>
         <div id="event6" class="timeline__item timeline__item--purple">
@@ -113,7 +113,7 @@ layout: default
             <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia cum culpa illum! Et rem totam
               accusantium quia neque itaque, temporibus optio veritatis aut, dolorum a, nam quod sequi unde.</p>
-            <p><a class="js-link" data-amend="#event4">Amend event</a></p>
+            <p><a class="js-link" data-amend-event="qapDiscussionFormTemplate">Amend event</a></p>
           </div>
         </div>
         <div id="event7" class="timeline__item timeline__item--green">
@@ -123,7 +123,7 @@ layout: default
             <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia cum culpa illum! Et rem totam
               accusantium quia neque itaque, temporibus optio veritatis aut, dolorum a, nam quod sequi unde.</p>
-            <p><a class="js-link" data-amend="#event1">Amend event</a></p>
+            <p><a class="js-link" data-amend-event="bereavedDiscussionFormTemplate">Amend event</a></p>
           </div>
         </div>
         <div id="event8" class="timeline__item timeline__item--pink">
@@ -133,7 +133,7 @@ layout: default
             <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quia cum culpa illum! Et rem totam
               accusantium quia neque itaque, temporibus optio veritatis aut, dolorum a, nam quod sequi unde.</p>
-            <p><a class="js-link" data-amend="#event4">Amend event</a></p>
+            <p><a class="js-link" data-amend-event="otherCaseFormTemplate">Amend event</a></p>
           </div>
         </div>
       </div>
@@ -150,7 +150,7 @@ layout: default
 
       <h2 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">Add a new timeline event or continue editing a draft</h2>
 
-      <div class="nhsuk-grid-row nhsuk-grid-row--align nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
+      <div class="nhsuk-grid-row nhsuk-grid-row--align-center nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
         <div class="nhsuk-grid-column-one-half">
           <h3>You are adding...</h3>
           <!-- TIMELINE EVENTS -->
@@ -159,24 +159,26 @@ layout: default
               ---
             </label> -->
             <select class="nhsuk-select" id="timeline_event_template" name="timeline_event_template" required>
-              <option value="" selected>Select an event</option>
-              <option value="latestAdmissionNotesFormTemplate">Latest admission notes</option>
-              <option value="mePreScrutinyFormTemplate">ME pre-scrutiny</option>
-              <option value="qapDiscussionFormTemplate">QAP discussion</option>
-              <option value="bereavedDiscussionFormTemplate">Bereaved/representative discussion</option>
-              <option value="medicalHistoryFormTemplate">Medical history notes</option>
-              <option value="meoSummaryFormTemplate">MEO summary</option>
-              <option value="otherCaseFormTemplate">Other case info</option>
+              <option data-info="" value="" selected>Select an event</option>
+              <option data-info="This should cover the details of the patient's latest admission to hospital. It should cover relevant information that will help the MEO write their summary of the case."
+                value="latestAdmissionNotesFormTemplate">Latest admission notes</option>
+              <option data-info="This should be completed before the two further parts of the scrutiny process, and should detail the Medical Examiner's independant view of the cause of death based on the information available."
+                value="mePreScrutinyFormTemplate">ME pre-scrutiny</option>
+              <option data-info="This should capture the official discussion between the Medical Examiner and QAP, and it should happen after the ME has completed their pre-scrutiny. It is unable to happen at all for any reason, it should be marked below."
+                value="qapDiscussionFormTemplate">QAP discussion</option>
+              <option data-info="This should capture the official discussion between the ME and the bereaved or representative, offering them an opportunity to raise any concerns or provide additional information."
+                value="bereavedDiscussionFormTemplate">Bereaved/representative discussion</option>
+              <option data-info="This should cover any relevant information about the patient's previous medical history that may be helpful for the Medical Examiner when scrutinising the death."
+                value="medicalHistoryFormTemplate">Medical history notes</option>
+              <option data-info="This should provide a summary of the case information and any context to help the Medical Examiner scrutinise the death. Once it is added to the timeline, the case will be marked as 'Ready for scrutiny'." value="meoSummaryFormTemplate">MEO summary</option>
+              <option data-info="This case event should be used to add any other relevant information or context about the case that may be useful for the MEOs or ME."
+                value="otherCaseFormTemplate">Other case info</option>
             </select>
           </div>
           <!-- // TIMELINE EVENTS -->
         </div>
         <div class="nhsuk-grid-column-one-half">
-          <div class="nhsuk-info">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam quibusdam tempore, at vero quos ipsum
-            voluptas libero excepturi ad laborum natus dolorem repudiandae doloribus debitis corporis illo magni,
-            perferendis minima.
-          </div>
+          <div id="eventTemplateInfo"></div>
         </div>
       </div>
 
@@ -196,7 +198,7 @@ layout: default
       <h4 class="timeline__item__subheader">John Smith, ME, Today at 11:45am</h4>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id fugit vero harum numquam voluptatum voluptas
         similique tenetur quae, fugiat nostrum, sed quasi maxime tempora unde eius sequi? Exercitationem, non minima.</p>
-      <p><a class="js-link" data-amend="#event{number}">Amend event</a></p>
+      <p><a class="js-link" data-amend-event="latestAdmissionNotesFormTemplate">Amend event</a></p>
     </div>
   </div>
 </template>
@@ -210,7 +212,7 @@ layout: default
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda blanditiis ad sapiente commodi consequatur
         magnam veniam esse iste adipisci pariatur nihil similique facilis cumque minus qui, accusantium deleniti
         voluptate architecto?</p>
-      <p><a class="js-link" data-amend="#event{number}">Amend event</a></p>
+      <p><a class="js-link" data-amend-event="medicalHistoryFormTemplate">Amend event</a></p>
     </div>
   </div>
 </template>
@@ -224,7 +226,7 @@ layout: default
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit pariatur officiis consectetur officia natus
         quisquam ullam eveniet corrupti, doloribus voluptates veritatis? Fugiat rerum, dignissimos unde aliquam ab
         suscipit rem nulla?</p>
-      <p><a class="js-link" data-amend="#event{number}">Amend event</a></p>
+      <p><a class="js-link" data-amend-event="meoSummaryFormTemplate">Amend event</a></p>
     </div>
   </div>
 </template>
@@ -238,7 +240,7 @@ layout: default
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, similique doloremque possimus repellat
         laboriosam exercitationem molestias obcaecati eaque adipisci aut magnam laborum nostrum! Incidunt, accusantium
         ea quasi quisquam non veniam.</p>
-      <p><a class="js-link" data-amend="#event{number}">Amend event</a></p>
+      <p><a class="js-link" data-amend-event="mePreScrutinyFormTemplate">Amend event</a></p>
     </div>
   </div>
 </template>
@@ -252,7 +254,7 @@ layout: default
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, dolorem corporis? Consectetur alias ex fuga
         sit cupiditate deleniti possimus aliquam suscipit, excepturi voluptas harum modi, fugit velit accusantium rerum
         aperiam.</p>
-      <p><a class="js-link" data-amend="#event{number}">Amend event</a></p>
+      <p><a class="js-link" data-amend-event="qapDiscussionFormTemplate">Amend event</a></p>
     </div>
   </div>
 </template>
@@ -266,7 +268,7 @@ layout: default
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam sit aperiam necessitatibus eaque, eius
         asperiores recusandae quia accusamus, ut earum, quod voluptate explicabo quidem natus possimus sapiente aut
         nemo? Soluta.</p>
-      <p><a class="js-link" data-amend="#event{number}">Amend event</a></p>
+      <p><a class="js-link" data-amend-event="bereavedDiscussionFormTemplate">Amend event</a></p>
     </div>
   </div>
 </template>
@@ -280,7 +282,7 @@ layout: default
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus maxime quo exercitationem amet
         quaerat accusamus saepe, rerum totam beatae omnis quod magnam quas repellendus eaque quae culpa dignissimos
         enim similique!</p>
-      <p><a class="js-link" data-amend="#event{number}">Amend event</a></p>
+      <p><a class="js-link" data-amend-event="otherCaseFormTemplate">Amend event</a></p>
     </div>
   </div>
 </template>

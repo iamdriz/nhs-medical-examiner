@@ -182,6 +182,20 @@ $(document).on('change', '#timeline_event_template', function(){
   if(template != '')
     template = $('#' + template).clone().html();
   $('#eventTemplateHTML').html(template);
+  var info = $(this).find('option:selected').attr('data-info');
+  if(info != '')
+    $('#eventTemplateInfo').html('<div class="nhsuk-info">' + info + '</div>');
+  else
+    $('#eventTemplateInfo').html('');
+  $('html, body').animate({
+      scrollTop: $("#eventTemplateHTML").offset().top
+  }, 0);
+});
+
+// amend a template
+$(document).on('click', '[data-amend-event]', function(){
+  var template = $(this).attr('data-amend-event');
+  $('#timeline_event_template').val(template).change().selectric('refresh');
 });
 
 // add event to timeline
@@ -191,6 +205,21 @@ $(document).on('click', '[data-add-event]', function() {
   var count = $('.timeline__item').length + 1;
   template = template.replace(/{number}/g, count);
   $('#events').append(template);
-  $('#timeline_event_template').val('');
-  $('#eventTemplateHTML').html('');
+  $('#timeline_event_template').val('').change().selectric('refresh');
+});
+
+$(document).ready(function () {
+
+  $('select').selectric();
+
+  $('#timeline_event_template').selectric({
+      optionsItemBuilder: function (itemData) {
+          return itemData.value !== '' ? '<span class="swatch swatch--' + itemData.value + '"><span class="text">' + itemData.text + '</span></span>' : itemData.text;
+      },
+      labelBuilder: function (currItem) {
+          return currItem.value !== '' ? '<span class="swatch swatch--' + currItem.value + '"><span class="text">' + currItem.text + '</span></span>' : currItem.text;
+      }
+  }).on('selectric-select', function (e) {
+  });
+
 });
