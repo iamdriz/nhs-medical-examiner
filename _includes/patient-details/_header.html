@@ -39,20 +39,40 @@
   </div>
 </div>
 
+{% if page.url contains '/meo' %}
 <ul class="nhsuk-tabs">
   <li class="nhsuk-tab">
-    <a {% if page.url=='/patient-details/' %} class="selected" {% endif %} href="/patient-details/">Patient details</a>
+    <a {% if page.url=='/meo/patient-details/' %} class="selected" {% endif %} href="/meo/patient-details/">Patient details</a>
   </li>
   <li class="nhsuk-tab">
-    <a {% if page.url=='/patient-details/medical-team/' %} class="selected" {% endif %} href="/patient-details/medical-team/">Medical
+    <a {% if page.url=='/meo/patient-details/medical-team/' %} class="selected" {% endif %} href="/meo/patient-details/medical-team/">Medical
       team</a>
   </li>
   <li class="nhsuk-tab">
-    <a {% if page.url=='/patient-details/case-breakdown/' %} class="selected" {% endif %} href="/patient-details/case-breakdown/">Case
+    <a {% if page.url=='/meo/patient-details/case-breakdown/' %} class="selected" {% endif %} href="/meo/patient-details/case-breakdown/">Case
       breakdown</a>
   </li>
   <li class="nhsuk-tab">
-    <a {% if page.url=='/patient-details/case-outcomes/' %} class="selected" {% endif %} href="/patient-details/case-outcomes/">Case
+    <a {% if page.url=='/meo/patient-details/case-outcomes/' %} class="selected" {% endif %} href="/meo/patient-details/case-outcomes/">Case
       outcomes</a>
   </li>
 </ul>
+{% else %}
+<ul class="nhsuk-tabs">
+    <li class="nhsuk-tab">
+      <a {% if page.url=='/me/patient-details/' %} class="selected" {% endif %} href="/me/patient-details/">Patient details</a>
+    </li>
+    <li class="nhsuk-tab">
+      <a {% if page.url=='/me/patient-details/medical-team/' %} class="selected" {% endif %} href="/me/patient-details/medical-team/">Medical
+        team</a>
+    </li>
+    <li class="nhsuk-tab">
+      <a {% if page.url=='/me/patient-details/case-breakdown/' %} class="selected" {% endif %} href="/me/patient-details/case-breakdown/">Case
+        breakdown</a>
+    </li>
+    <li class="nhsuk-tab">
+      <a {% if page.url=='/me/patient-details/case-outcomes/' %} class="selected" {% endif %} href="/me/patient-details/case-outcomes/">Case
+        outcomes</a>
+    </li>
+  </ul>
+{% endif %}

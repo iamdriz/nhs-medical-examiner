@@ -209,8 +209,8 @@ $(document).on('click', '[data-add-event]', function() {
 });
 
 // expanded
-$(document).on('click', '[data-expandable]', function(){
-  $(this).toggleClass('timeline__item--expanded');
+$(document).on('click', '.timeline__item__expander', function(){
+  $(this).parents('.timeline__item').toggleClass('timeline__item--expanded');
 });
 
 $(document).ready(function () {
