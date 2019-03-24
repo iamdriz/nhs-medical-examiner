@@ -177,29 +177,29 @@ $(document).on('change', '#mccd_issued, #gp_notification', function () {
 });
 
 // timeline events
-$(document).on('change', '#timeline_event_template', function(){
+$(document).on('change', '#timeline_event_template', function () {
   var template = $(this).val();
-  if(template != '')
+  if (template != '')
     template = $('#' + template).clone().html();
   $('#eventTemplateHTML').html(template);
   var info = $(this).find('option:selected').attr('data-info');
-  if(info != '')
+  if (info != '')
     $('#eventTemplateInfo').html('<div class="nhsuk-info">' + info + '</div>');
   else
     $('#eventTemplateInfo').html('');
   $('html, body').animate({
-      scrollTop: $("#timeline-section").offset().top
+    scrollTop: $("#timeline-section").offset().top
   }, 0);
 });
 
 // amend a template
-$(document).on('click', '[data-amend-event]', function(){
+$(document).on('click', '[data-amend-event]', function () {
   var template = $(this).attr('data-amend-event');
   $('#timeline_event_template').val(template).change().selectric('refresh');
 });
 
 // add event to timeline
-$(document).on('click', '[data-add-event]', function() {
+$(document).on('click', '[data-add-event]', function () {
   var template = $(this).attr('data-add-event');
   template = $(template).clone().html();
   var count = $('.timeline__item').length + 1;
@@ -208,11 +208,11 @@ $(document).on('click', '[data-add-event]', function() {
   $('#timeline_event_template').val('').change().selectric('refresh');
   $('html, body').animate({
     scrollTop: $("#event" + count).offset().top
-}, 0);
+  }, 0);
 });
 
 // expanded
-$(document).on('click', '.timeline__item__expander', function(){
+$(document).on('click', '.timeline__item__expander', function () {
   $(this).parents('.timeline__item').toggleClass('timeline__item--expanded');
 });
 
@@ -221,13 +221,28 @@ $(document).ready(function () {
   $('select').selectric();
 
   $('#timeline_event_template').selectric({
-      optionsItemBuilder: function (itemData) {
-          return itemData.value !== '' ? '<span class="swatch swatch--' + itemData.value + '"><span class="text">' + itemData.text + '</span></span>' : itemData.text;
-      },
-      labelBuilder: function (currItem) {
-          return currItem.value !== '' ? '<span class="swatch swatch--' + currItem.value + '"><span class="text">' + currItem.text + '</span></span>' : currItem.text;
-      }
+    optionsItemBuilder: function (itemData) {
+      return itemData.value !== '' ? '<span class="swatch swatch--' + itemData.value + '"><span class="text">' + itemData.text + '</span></span>' : itemData.text;
+    },
+    labelBuilder: function (currItem) {
+      return currItem.value !== '' ? '<span class="swatch swatch--' + currItem.value + '"><span class="text">' + currItem.text + '</span></span>' : currItem.text;
+    }
   }).on('selectric-select', function (e) {
   });
 
+});
+
+
+$(document).on('change', '[name="rep"]', function () {
+  var element = $(this);
+  var rep1 = $('#representative1');
+  var rep2 = $('#representative2');
+  var cssClass = 'hide';
+  if (element.val() == 'rep1') {
+    rep2.addClass(cssClass);
+    rep1.removeClass(cssClass);
+  } else {
+    rep1.addClass(cssClass);
+    rep2.removeClass(cssClass);
+  }
 });

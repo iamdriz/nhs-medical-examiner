@@ -382,44 +382,95 @@
   <!-- QAP DISCUSSION -->
 
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-grid-column-full">
       <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="full_name">
-          Full name
-        </label>
-        <input class="nhsuk-input" id="full_name" name="full_name" type="text" required="required">
-      </div>
-    </div>
-    <div class="nhsuk-grid-column-one-half">
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="role">
-          Role
-        </label>
-        <input class="nhsuk-input" id="role" name="role" type="text" required="required">
-      </div>
-    </div>
-  </div>
-
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-one-half">
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="organisation">
-          Organisation
-        </label>
-        <input class="nhsuk-input" id="organisation" name="organisation" type="text" required="required">
-      </div>
-    </div>
-    <div class="nhsuk-grid-column-one-half">
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="phone_number">
-          Personal phone / bleep number
-        </label>
-        <input class="nhsuk-input" id="phone_number" name="phone_number" type="text" required="required">
+        <div class="nhsuk-radios nhsuk-radios--inline">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="rep1" name="rep" type="radio" value="rep1" checked>
+            <label class="nhsuk-label nhsuk-radios__label" for="rep1">
+              Anthony Gould
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="rep2" name="rep" type="radio" value="rep2">
+            <label class="nhsuk-label nhsuk-radios__label" for="rep2">
+              Another representative
+            </label>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="nhsuk-grid-row">
+  <div id="representative1">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-conditional">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-quarter">
+              <h4 class="nhsuk-u-margin-bottom-0">Relationship</h4>
+              <p>Brother</p>
+            </div>
+            <div class="nhsuk-grid-column-one-quarter">
+              <h4 class="nhsuk-u-margin-bottom-0">Present at death</h4>
+              <p>Yes</p>
+            </div>
+          </div>
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-quarter">
+              <h4 class="nhsuk-u-margin-bottom-0">Phone number</h4>
+              <p class="nhsuk-u-margin-bottom-0">07749135642</p>
+            </div>
+            <div class="nhsuk-grid-column-one-quarter">
+              <h4 class="nhsuk-u-margin-bottom-0">Informed of death</h4>
+              <p class="nhsuk-u-margin-bottom-0">Yes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="representative2" class="hide">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="full_name">
+            Full name
+          </label>
+          <input class="nhsuk-input" id="full_name" name="full_name" type="text" required="required">
+        </div>
+      </div>
+      <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="role">
+            Role
+          </label>
+          <input class="nhsuk-input" id="role" name="role" type="text" required="required">
+        </div>
+      </div>
+    </div>
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="organisation">
+            Organisation
+          </label>
+          <input class="nhsuk-input" id="organisation" name="organisation" type="text" required="required">
+        </div>
+      </div>
+      <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="phone_number">
+            Personal phone / bleep number
+          </label>
+          <input class="nhsuk-input" id="phone_number" name="phone_number" type="text" required="required">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
     <div class="nhsuk-grid-column-one-half">
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
@@ -497,7 +548,8 @@
           </legend>
           <div class="nhsuk-radios nhsuk-radios--inline">
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="me_qap_decision1" name="me_qap_decision" type="radio" value="" checked>
+              <input class="nhsuk-radios__input" id="me_qap_decision1" name="me_qap_decision" type="radio" value=""
+                checked>
               <label class="nhsuk-label nhsuk-radios__label" for="me_qap_decision1">
                 MCCD to be issued
               </label>
@@ -522,7 +574,8 @@
           </legend>
           <div class="nhsuk-radios">
             <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
-              <input class="nhsuk-radios__input" id="cause_of_death1" name="cause_of_death" type="radio" value="" checked>
+              <input class="nhsuk-radios__input" id="cause_of_death1" name="cause_of_death" type="radio" value=""
+                checked>
               <label class="nhsuk-label nhsuk-radios__label" for="cause_of_death1">
                 Cause of death provided by the QAP before scrutiny accepted without change
               </label>
@@ -588,85 +641,139 @@
 
 <template id="bereavedDiscussionFormTemplate">
   <!-- BEREAVED DISCUSSION -->
+
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-grid-column-full">
       <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="full_name">
-          Full name
-        </label>
-        <input class="nhsuk-input" id="full_name" name="full_name" type="text" required="required">
-      </div>
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="relationship">
-          Relationship
-        </label>
-        <input class="nhsuk-input" id="relationship" name="relationship" type="text" required="required">
-      </div>
-      <div class="nhsuk-form-group">
-        <label class="nhsuk-label" for="phone_number">
-          Phone number
-        </label>
-        <input class="nhsuk-input" id="phone_number" name="phone_number" type="text" required="required">
-      </div>
-    </div>
-    <div class="nhsuk-grid-column-one-half">
-      <div class="nhsuk-form-group">
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend">
-            Present at death?
-          </legend>
-          <div class="nhsuk-radios nhsuk-radios--inline">
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="gender_male" name="gender" type="radio" value="male" checked>
-              <label class="nhsuk-label nhsuk-radios__label" for="gender_male">
-                Yes
-              </label>
-            </div>
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="gender_female" name="gender" type="radio" value="female">
-              <label class="nhsuk-label nhsuk-radios__label" for="gender_female">
-                No
-              </label>
-            </div>
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="gender_other" name="gender" type="radio" value="other">
-              <label class="nhsuk-label nhsuk-radios__label" for="gender_other">
-                Unknown
-              </label>
-            </div>
+        <div class="nhsuk-radios nhsuk-radios--inline">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="rep1" name="rep" type="radio" value="rep1" checked>
+            <label class="nhsuk-label nhsuk-radios__label" for="rep1">
+              Anthony Gould
+            </label>
           </div>
-        </fieldset>
-      </div>
-      <div class="nhsuk-form-group">
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend">
-            Informed of death?
-          </legend>
-          <div class="nhsuk-radios nhsuk-radios--inline">
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="gender_male" name="gender" type="radio" value="male" checked>
-              <label class="nhsuk-label nhsuk-radios__label" for="gender_male">
-                Yes
-              </label>
-            </div>
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="gender_female" name="gender" type="radio" value="female">
-              <label class="nhsuk-label nhsuk-radios__label" for="gender_female">
-                No
-              </label>
-            </div>
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="gender_other" name="gender" type="radio" value="other">
-              <label class="nhsuk-label nhsuk-radios__label" for="gender_other">
-                Unknown
-              </label>
-            </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="rep2" name="rep" type="radio" value="rep2">
+            <label class="nhsuk-label nhsuk-radios__label" for="rep2">
+              Another representative
+            </label>
           </div>
-        </fieldset>
+        </div>
       </div>
     </div>
   </div>
-  <div class="nhsuk-grid-row">
+
+  <div id="representative1">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-conditional">
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-quarter">
+              <h4 class="nhsuk-u-margin-bottom-0">Relationship</h4>
+              <p>Brother</p>
+            </div>
+            <div class="nhsuk-grid-column-one-quarter">
+              <h4 class="nhsuk-u-margin-bottom-0">Present at death</h4>
+              <p>Yes</p>
+            </div>
+          </div>
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-one-quarter">
+              <h4 class="nhsuk-u-margin-bottom-0">Phone number</h4>
+              <p class="nhsuk-u-margin-bottom-0">07749135642</p>
+            </div>
+            <div class="nhsuk-grid-column-one-quarter">
+              <h4 class="nhsuk-u-margin-bottom-0">Informed of death</h4>
+              <p class="nhsuk-u-margin-bottom-0">Yes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="representative2" class="hide">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="full_name">
+            Full name
+          </label>
+          <input class="nhsuk-input" id="full_name" name="full_name" type="text" required="required">
+        </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="relationship">
+            Relationship
+          </label>
+          <input class="nhsuk-input" id="relationship" name="relationship" type="text" required="required">
+        </div>
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="phone_number">
+            Phone number
+          </label>
+          <input class="nhsuk-input" id="phone_number" name="phone_number" type="text" required="required">
+        </div>
+      </div>
+      <div class="nhsuk-grid-column-one-half">
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend">
+              Present at death?
+            </legend>
+            <div class="nhsuk-radios nhsuk-radios--inline">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="present_at_death1" name="present_at_death" type="radio" value="male" checked>
+                <label class="nhsuk-label nhsuk-radios__label" for="present_at_death1">
+                  Yes
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="present_at_death2" name="present_at_death" type="radio" value="female">
+                <label class="nhsuk-label nhsuk-radios__label" for="present_at_death2">
+                  No
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="present_at_death3" name="present_at_death" type="radio" value="other">
+                <label class="nhsuk-label nhsuk-radios__label" for="present_at_death3">
+                  Unknown
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="nhsuk-form-group">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend">
+              Informed of death?
+            </legend>
+            <div class="nhsuk-radios nhsuk-radios--inline">
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="informed_of_death1" name="informed_of_death" type="radio" value="male" checked>
+                <label class="nhsuk-label nhsuk-radios__label" for="informed_of_death1">
+                  Yes
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="informed_of_death2" name="informed_of_death" type="radio" value="female">
+                <label class="nhsuk-label nhsuk-radios__label" for="informed_of_death2">
+                  No
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="informed_of_death3" name="informed_of_death" type="radio" value="other">
+                <label class="nhsuk-label nhsuk-radios__label" for="informed_of_death3">
+                  Unknown
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
     <div class="nhsuk-grid-column-full">
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset" role="group">
