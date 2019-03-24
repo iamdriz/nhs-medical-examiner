@@ -499,5 +499,30 @@
 .nhsuk-blue-header {
   color: #ffffff;
   background-color: #345a9b;
-  padding: 20px 20px;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding: 16px 16px;
+  @media (min-width: 40.0625em) {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 16px 36px;
+  }
+  @media (min-width: 61.875em) {
+    
+  }
+}
+
+.nhsuk-gray-panel {
+  background: #f0f4f5;
+  margin-left: -16px;
+  margin-right: -16px;
+  padding: 36px 16px;
+  @media (min-width: 40.0625em) {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 36px;
+  }
+  @media (min-width: 61.875em) {
+    
+  }
 }
