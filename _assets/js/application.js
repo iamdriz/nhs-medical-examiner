@@ -206,6 +206,9 @@ $(document).on('click', '[data-add-event]', function() {
   template = template.replace(/{number}/g, count);
   $('#events').append(template);
   $('#timeline_event_template').val('').change().selectric('refresh');
+  $('html, body').animate({
+    scrollTop: $("#event" + count).offset().top
+}, 0);
 });
 
 // expanded
