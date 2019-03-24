@@ -424,7 +424,7 @@
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset" aria-describedby="dob-hint" role="group">
           <legend class="nhsuk-fieldset__legend">
-            Date of birth
+            Date of discussion
           </legend>
           <div class="nhsuk-date-input" id="dob">
             <div class="nhsuk-date-input__item">
@@ -477,53 +477,7 @@
     </div>
   </div>
 
-
-  <div class="nhsuk-gray-panel">
-    <p>Cause of death established during scrutiny by Medical Examiner and QAP</p>
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-one-third">
-        <h3 class="nhsuk-u-margin-bottom-0">Dr Tia Sanchez</h3>
-        <p>ME</p>
-      </div>
-      <div class="nhsuk-grid-column-one-third">
-        <h3 class="nhsuk-u-margin-bottom-0">Jim Broadsmith</h3>
-        <p>QAP</p>
-      </div>
-      <div class="nhsuk-grid-column-one-third">
-        <p>22/02/19</p>
-      </div>
-    </div>
-    <h4>It is proposed that James Gould died from:</h4>
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-full">
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="cause_of_death1a">
-            1a
-          </label>
-          <input class="nhsuk-input" id="cause_of_death1a" name="cause_of_death1a" type="text" disabled>
-        </div>
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="cause_of_death1b">
-            1b
-          </label>
-          <input class="nhsuk-input" id="cause_of_death1b" name="cause_of_death1b" type="text" disabled>
-        </div>
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="cause_of_death1c">
-            1c
-          </label>
-          <input class="nhsuk-input" id="cause_of_death1c" name="cause_of_death1c" type="text" disabled>
-        </div>
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="cause_of_death2">
-            2
-          </label>
-          <input class="nhsuk-input" id="cause_of_death2" name="cause_of_death2" type="text" disabled>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  {% include patient-details/case-breakdown/_proposed-cause-of-death.html %}
 
   <h3>Details of discussion with QAP and ME</h3>
   <div class="nhsuk-form-group">
@@ -532,7 +486,6 @@
     </label> -->
     <textarea class="nhsuk-textarea" id="summary_of_discussion" name="summary_of_discussion" rows="10" required></textarea>
   </div>
-
 
   <h3>Outcomes of discussion</h3>
   <div class="nhsuk-grid-row">
@@ -560,7 +513,6 @@
       </div>
     </div>
   </div>
-
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-full">
       <div class="nhsuk-form-group">
@@ -569,13 +521,13 @@
             What was decided about the cause of death?
           </legend>
           <div class="nhsuk-radios">
-            <div class="nhsuk-radios__item">
+            <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
               <input class="nhsuk-radios__input" id="gender_male" name="gender" type="radio" value="male" checked>
               <label class="nhsuk-label nhsuk-radios__label" for="gender_male">
                 Cause of death provided by the QAP before scrutiny accepted without change
               </label>
             </div>
-            <div class="nhsuk-radios__item">
+            <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
               <input class="nhsuk-radios__input" id="gender_female" name="gender" type="radio" value="female">
               <label class="nhsuk-label nhsuk-radios__label" for="gender_female">
                 Cause of death established by ME accepted by QAP
@@ -592,7 +544,6 @@
       </div>
     </div>
   </div>
-
   <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
     <div class="nhsuk-grid-column-full">
       <h3>Revised cause of death agreed</h3>
@@ -622,7 +573,6 @@
       </div>
     </div>
   </div>
-
   <!-- // QAP DISCUSSION -->
   <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
     <div class="nhsuk-grid-column-full">
@@ -638,7 +588,209 @@
 
 <template id="bereavedDiscussionFormTemplate">
   <!-- BEREAVED DISCUSSION -->
-  <p>TODO</p>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-one-half">
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="full_name">
+          Full name
+        </label>
+        <input class="nhsuk-input" id="full_name" name="full_name" type="text" required="required">
+      </div>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="relationship">
+          Relationship
+        </label>
+        <input class="nhsuk-input" id="relationship" name="relationship" type="text" required="required">
+      </div>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="phone_number">
+          Phone number
+        </label>
+        <input class="nhsuk-input" id="phone_number" name="phone_number" type="text" required="required">
+      </div>
+    </div>
+    <div class="nhsuk-grid-column-one-half">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend">
+            Present at death?
+          </legend>
+          <div class="nhsuk-radios nhsuk-radios--inline">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gender_male" name="gender" type="radio" value="male" checked>
+              <label class="nhsuk-label nhsuk-radios__label" for="gender_male">
+                Yes
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gender_female" name="gender" type="radio" value="female">
+              <label class="nhsuk-label nhsuk-radios__label" for="gender_female">
+                No
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gender_other" name="gender" type="radio" value="other">
+              <label class="nhsuk-label nhsuk-radios__label" for="gender_other">
+                Unknown
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend">
+            Informed of death?
+          </legend>
+          <div class="nhsuk-radios nhsuk-radios--inline">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gender_male" name="gender" type="radio" value="male" checked>
+              <label class="nhsuk-label nhsuk-radios__label" for="gender_male">
+                Yes
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gender_female" name="gender" type="radio" value="female">
+              <label class="nhsuk-label nhsuk-radios__label" for="gender_female">
+                No
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gender_other" name="gender" type="radio" value="other">
+              <label class="nhsuk-label nhsuk-radios__label" for="gender_other">
+                Unknown
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset" role="group">
+          <legend class="nhsuk-fieldset__legend">
+            Date of conversation
+          </legend>
+          <div class="nhsuk-date-input">
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="appointment1_day">
+                  Day
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="appointment1_day" name="appointment1_day"
+                  type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="appointment1_month">
+                  Month
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="appointment1_month" name="appointment1_month"
+                  type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="appointment1_year">
+                  Year
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="appointment1_year" name="appointment1_year"
+                  type="number" pattern="[0-9]*">
+              </div>
+            </div>
+            <div class="nhsuk-date-input__item">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label nhsuk-date-input__label" for="appointment1_time">
+                  Time
+                </label>
+                <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="appointment1_time" name="appointment1_time"
+                  type="number" pattern="[0-9]*">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="nhsuk-form-group">
+        <div class="nhsuk-checkboxes__item">
+          <input class="nhsuk-checkboxes__input" id="dod_unknown" name="dod_unknown" type="checkbox" value="">
+          <label class="nhsuk-label nhsuk-checkboxes__label" for="dod_unknown">
+            Tick if this discussion with a representative was unable to happen at all
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include patient-details/case-breakdown/_proposed-cause-of-death.html %}
+
+
+  <h3>Details of the discussion with the bereaved</h3>
+  <div class="nhsuk-form-group">
+    <!-- <label class="nhsuk-label" for="summary_of_discussion">
+      Details of discussion with QAP and ME
+    </label> -->
+    <textarea class="nhsuk-textarea" id="summary_of_discussion" name="summary_of_discussion" rows="10" required></textarea>
+  </div>
+
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3">
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-form-group">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend">
+            Outcome
+          </legend>
+          <span class="nhsuk-hint">
+            What as the ultimate outcome of the conversation with the family member of representative?
+          </span>
+          <div class="nhsuk-radios">
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
+                  <input class="nhsuk-radios__input" id="funeral_arrangements_cremation" name="funeral_arrangements"
+                    type="radio" value="cremation" checked>
+                  <label class="nhsuk-label nhsuk-radios__label" for="funeral_arrangements_cremation">
+                    Cause of death accepted without concerns
+                  </label>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
+                  <input class="nhsuk-radios__input" id="funeral_arrangements_buried_at_sea" name="funeral_arrangements"
+                    type="radio" value="buried_at_sea">
+                  <label class="nhsuk-label nhsuk-radios__label" for="funeral_arrangements_buried_at_sea">
+                    Concerns raised
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-one-half">
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="funeral_arrangements_burial" name="funeral_arrangements" type="radio"
+                    value="burial">
+                  <label class="nhsuk-label nhsuk-radios__label" for="funeral_arrangements_burial">
+                    Concerns raised indicate coroner involvement
+                  </label>
+                </div>
+              </div>
+              <div class="nhsuk-grid-column-one-half">
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="funeral_arrangements_repatriation" name="funeral_arrangements"
+                    type="radio" value="repatriation">
+                  <label class="nhsuk-label nhsuk-radios__label" for="funeral_arrangements_repatriation">
+                    Concerns raised about quality of care
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+
   <!-- // BEREAVED DISCUSSION -->
   <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
     <div class="nhsuk-grid-column-full">

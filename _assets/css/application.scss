@@ -283,9 +283,10 @@
       position: absolute;
       top: 20px;
       right: 20px;
-      width: 32px;
-      height: 32px;
-      background: red;
+      width: 34px;
+      height: 34px;
+      cursor: pointer;
+      transform: rotate(-90deg);
     }
     &:last-child {
       margin-bottom: 0;
@@ -343,6 +344,9 @@
       }
       .timeline__item__main {
         display: block;
+      }
+      .timeline__item__expander {
+        transform: rotate(90deg);
       }
     }
     // grey
@@ -490,4 +494,10 @@
       }
     }
   }
+}
+
+.nhsuk-blue-header {
+  color: #ffffff;
+  background-color: #345a9b;
+  padding: 20px 20px;
 }
