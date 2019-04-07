@@ -1,3 +1,6 @@
+{% if page.url contains 'patient-details' %}
+{% assign pt = true %}
+{% endif %}
 <!-- NAME -->
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-one-half">
@@ -5,7 +8,7 @@
       <label class="nhsuk-label" for="surname">
         Surname
       </label>
-      <input class="nhsuk-input" id="surname" name="surname" type="text" required="required">
+      <input class="nhsuk-input" id="surname" name="surname" type="text" required="required" value="{% if pt %}Pamphlet{% endif %}">
     </div>
   </div>
   <div class="nhsuk-grid-column-one-half">
@@ -13,7 +16,7 @@
       <label class="nhsuk-label" for="given_name">
         Given name(s)
       </label>
-      <input class="nhsuk-input" id="given_name" name="given_name" type="text" required="required">
+      <input class="nhsuk-input" id="given_name" name="given_name" type="text" required="required" value="{% if pt %}John George{% endif %}">
     </div>
   </div>
 </div>
@@ -29,7 +32,8 @@
         </legend>
         <div class="nhsuk-radios nhsuk-radios--inline">
           <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="gender_male" name="gender" type="radio" value="male">
+            <input class="nhsuk-radios__input" id="gender_male" name="gender" type="radio" value="male" {% if pt %}
+              checked{% endif %}>
             <label class="nhsuk-label nhsuk-radios__label" for="gender_male">
               Male
             </label>
@@ -41,7 +45,8 @@
             </label>
           </div>
           <div class="nhsuk-radios__item">
-            <input class="nhsuk-radios__input" id="gender_other" name="gender" type="radio" value="other" checked>
+            <input class="nhsuk-radios__input" id="gender_other" name="gender" type="radio" value="other" {% unless pt
+              %} checked{% endunless %}>
             <label class="nhsuk-label nhsuk-radios__label" for="gender_other">
               Other
             </label>
@@ -50,7 +55,7 @@
       </fieldset>
     </div>
     <!-- details appears if other selected -->
-    <div class="nhsuk-form-group" id="form-group-gender-other">
+    <div class="nhsuk-form-group{% if pt %} nhsuk-form-group--hidden{% endif %}" id="form-group-gender-other">
       <label class="nhsuk-label" for="gender_more_details">
         Please enter details below
       </label>
@@ -67,12 +72,13 @@
       <label class="nhsuk-label" for="nhs_number">
         NHS number
       </label>
-      <input class="nhsuk-input" id="nhs_number" name="nhs_number" type="text" required>
+      <input class="nhsuk-input" id="nhs_number" name="nhs_number" type="text" value="{% if pt %}123-456-789{% endif %}"
+        required>
     </div>
     <div class="nhsuk-checkboxes">
       <div class="nhsuk-checkboxes__item">
         <input data-unknown="#nhs_number" class="nhsuk-checkboxes__input" id="nhs_number_unknown" name="nhs_number_unknown"
-          type="checkbox" value="">
+          type="checkbox" value="" {% if pt %} disabled{% endif %}>
         <label class="nhsuk-label nhsuk-checkboxes__label" for="nhs_number_unknown">
           Unknown
         </label>
@@ -123,7 +129,7 @@
                 Day
               </label>
               <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-day" name="dob-day" type="number"
-                pattern="[0-9]*" required>
+                pattern="[0-9]*" value="{% if pt %}01{% endif %}" required>
             </div>
           </div>
           <div class="nhsuk-date-input__item">
@@ -132,7 +138,7 @@
                 Month
               </label>
               <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dob-month" name="dob-month"
-                type="number" pattern="[0-9]*" required>
+                type="number" pattern="[0-9]*" value="{% if pt %}05{% endif %}" required>
             </div>
           </div>
           <div class="nhsuk-date-input__item">
@@ -141,7 +147,7 @@
                 Year
               </label>
               <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dob-year" name="dob-year"
-                type="number" pattern="[0-9]*" required>
+                type="number" pattern="[0-9]*" value="{% if pt %}1974{% endif %}" required>
             </div>
           </div>
         </div>
@@ -149,8 +155,8 @@
     </div>
     <div class="nhsuk-checkboxes">
       <div class="nhsuk-checkboxes__item">
-        <input data-disable-if-value="#dob-day,#dob-month,#dob-year" data-unknown="#dob-day,#dob-month,#dob-year" class="nhsuk-checkboxes__input" id="dob_unknown" name="dob_unknown" type="checkbox"
-          value="">
+        <input data-disable-if-value="#dob-day,#dob-month,#dob-year" data-unknown="#dob-day,#dob-month,#dob-year" class="nhsuk-checkboxes__input"
+          id="dob_unknown" name="dob_unknown" type="checkbox" value="" {% if pt %} disabled{% endif %}>
         <label class="nhsuk-label nhsuk-checkboxes__label" for="dob_unknown">
           Unknown
         </label>
@@ -172,7 +178,7 @@
                     Day
                   </label>
                   <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dod-day" name="dod-day"
-                    type="number" pattern="[0-9]*">
+                    type="number" pattern="[0-9]*" value="{% if pt %}04{% endif %}">
                 </div>
               </div>
               <div class="nhsuk-date-input__item">
@@ -181,7 +187,7 @@
                     Month
                   </label>
                   <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="dod-month" name="dod-month"
-                    type="number" pattern="[0-9]*">
+                    type="number" pattern="[0-9]*" value="{% if pt %}04{% endif %}">
                 </div>
               </div>
               <div class="nhsuk-date-input__item">
@@ -190,7 +196,7 @@
                     Year
                   </label>
                   <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="dod-year" name="dod-year"
-                    type="number" pattern="[0-9]*">
+                    type="number" pattern="[0-9]*" value="{% if pt %}2019{% endif %}">
                 </div>
               </div>
             </div>
@@ -198,8 +204,9 @@
         </div>
         <div class="nhsuk-checkboxes">
           <div class="nhsuk-checkboxes__item">
-            <input data-disable-if-value="#dod-day,#dod-month,#dod-year" data-unknown="#dod-day,#dod-month,#dod-year" class="nhsuk-checkboxes__input" id="dod_unknown" name="dod_unknown" type="checkbox"
-              value="">
+            <input data-disable-if-value="#dod-day,#dod-month,#dod-year" data-unknown="#dod-day,#dod-month,#dod-year"
+              class="nhsuk-checkboxes__input" id="dod_unknown" name="dod_unknown" type="checkbox" value="" {% if pt %}
+              disabled{% endif %}>
             <label class="nhsuk-label nhsuk-checkboxes__label" for="dod_unknown">
               Unknown
             </label>
@@ -212,7 +219,7 @@
             <legend class="nhsuk-fieldset__legend">
               Age
             </legend>
-            <div class="nhsuk-giant" id="age">0</div>
+            <div class="nhsuk-giant" id="age">{% if pt %}44{% endif %}</div>
           </fieldset>
         </div>
       </div>
@@ -229,12 +236,12 @@
         Time of death
       </label>
       <input placeholder="15:31" class="nhsuk-input nhsuk-input--width-5" id="time_of_death" name="time_of_death" type="text"
-        required>
+        value="{% if pt %}14:06{% endif %}" required>
     </div>
     <div class="nhsuk-checkboxes">
       <div class="nhsuk-checkboxes__item">
         <input data-unknown="#time_of_death" class="nhsuk-checkboxes__input" id="time_of_death_unknown" name="time_of_death_unknown"
-          type="checkbox" value="">
+          type="checkbox" value="" {% if pt %} disabled{% endif %}>
         <label class="nhsuk-label nhsuk-checkboxes__label" for="time_of_death_unknown">
           Unknown
         </label>
@@ -252,10 +259,10 @@
         Place where death occurred
       </label>
       <select class="nhsuk-select" id="death_location" name="death_location" required>
-        <option value="" selected>Select a location</option>
-        <option value="location_1">Location 1</option>
-        <option value="location_2">Location 2</option>
-        <option value="location_3">Location 3</option>
+        <option value="">Select a location</option>
+        <option value="location_1">Gloustershire Royal Hospital</option>
+        <option value="location_2" {% if pt %} selected{% endif %}>Neverland Hospital</option>
+        <option value="location_3">Sheffield Teaching Hospital</option>
       </select>
     </div>
   </div>
@@ -265,10 +272,10 @@
         ME Office responsible for case
       </label>
       <select class="nhsuk-select" id="me_office" name="me_office" required>
-        <option value="" selected>Select an office</option>
-        <option value="office_1">Office 1</option>
-        <option value="office_2">Office 2</option>
-        <option value="office_3">Office 3</option>
+        <option value="">Select an office</option>
+        <option value="office_1">Gloustershire Royal Hospital</option>
+        <option value="office_2" {% if pt %} selected{% endif %}>Neverland Hospital</option>
+        <option value="office_3">Sheffield Teaching Hospital</option>
       </select>
     </div>
     <div class="nhsuk-checkboxes">
