@@ -216,6 +216,10 @@ $(document).on('click', '.timeline__item__expander', function () {
   $(this).parents('.timeline__item').toggleClass('timeline__item--expanded');
 });
 
+$(document).on('click', '.nhsuk-case__header__arrow', function () {
+  $(this).parents('.nhsuk-case').toggleClass('nhsuk-case--open');
+});
+
 $(document).ready(function () {
 
   $('select').selectric();
