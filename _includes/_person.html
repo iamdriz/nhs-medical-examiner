@@ -5,18 +5,18 @@
 <div class="nhsuk-grid-row">
   <div class="nhsuk-grid-column-one-half">
     <div class="nhsuk-form-group">
-      <label class="nhsuk-label" for="surname">
-        Surname
-      </label>
-      <input class="nhsuk-input" id="surname" name="surname" type="text" required="required" value="{% if pt %}Pamphlet{% endif %}">
-    </div>
-  </div>
-  <div class="nhsuk-grid-column-one-half">
-    <div class="nhsuk-form-group">
       <label class="nhsuk-label" for="given_name">
         Given name(s)
       </label>
       <input class="nhsuk-input" id="given_name" name="given_name" type="text" required="required" value="{% if pt %}John George{% endif %}">
+    </div>
+  </div>
+  <div class="nhsuk-grid-column-one-half">
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="surname">
+        Surname
+      </label>
+      <input class="nhsuk-input" id="surname" name="surname" type="text" required="required" value="{% if pt %}Pamphlet{% endif %}">
     </div>
   </div>
 </div>
@@ -28,7 +28,7 @@
     <div class="nhsuk-form-group">
       <fieldset class="nhsuk-fieldset">
         <legend class="nhsuk-fieldset__legend">
-          Gender
+          Sex
         </legend>
         <div class="nhsuk-radios nhsuk-radios--inline">
           <div class="nhsuk-radios__item">
@@ -42,6 +42,12 @@
             <input class="nhsuk-radios__input" id="gender_female" name="gender" type="radio" value="female">
             <label class="nhsuk-label nhsuk-radios__label" for="gender_female">
               Female
+            </label>
+          </div>
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="gender_intersex" name="gender" type="radio" value="intersex">
+            <label class="nhsuk-label nhsuk-radios__label" for="gender_intersex">
+              Intersex
             </label>
           </div>
           <div class="nhsuk-radios__item">
