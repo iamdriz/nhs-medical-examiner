@@ -422,24 +422,6 @@
         text-decoration: underline;
       }
     }
-    // blue2
-    &.timeline__item--blue2 {
-      border-left-color: #345a9b;
-      .timeline__item__header {
-        color: #345a9b;
-      }
-      &.timeline__item--expanded {
-        .timeline__item__number {
-          color: #ffffff;
-          background: #345a9b;
-        }
-      }
-      .js-link {
-        //color: #345a9b;
-        color: #768691;
-        text-decoration: underline;
-      }
-    }
     // ocean
     &.timeline__item--ocean {
       border-left-color: #3cb7e2;
@@ -508,6 +490,24 @@
       }
       .js-link {
         //color: #73be41;
+        color: #768691;
+        text-decoration: underline;
+      }
+    }
+    // blue2
+    &.timeline__item--blue2 {
+      border-left-color: #345a9b;
+      .timeline__item__header {
+        color: #345a9b;
+      }
+      &.timeline__item--expanded {
+        .timeline__item__number {
+          color: #ffffff;
+          background: #345a9b;
+        }
+      }
+      .js-link {
+        //color: #345a9b;
         color: #768691;
         text-decoration: underline;
       }
