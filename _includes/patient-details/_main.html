@@ -262,27 +262,27 @@
             <div class="nhsuk-grid-column-one-half">
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="bereaved_present_at_death1">
-                  Present at death
+                  Present at death?
                 </label>
-                <div class="nhsuk-button-radios">
-                  <div class="nhsuk-button-radios__item">
-                    <input class="nhsuk-button-radios__input" id="bereaved_present_at_death_yes1" name="bereaved_present_at_death1"
+                <div class="nhsuk-radios nhsuk-radios--inline">
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="bereaved_present_at_death_yes1" name="bereaved_present_at_death1"
                       type="radio" value="yes">
-                    <label class="nhsuk-label nhsuk-button-radios__label" for="bereaved_present_at_death_yes1">
+                    <label class="nhsuk-label nhsuk-radios__label" for="bereaved_present_at_death_yes1">
                       Yes
                     </label>
                   </div>
-                  <div class="nhsuk-button-radios__item">
-                    <input class="nhsuk-button-radios__input" id="bereaved_present_at_death_no1" name="bereaved_present_at_death1"
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="bereaved_present_at_death_no1" name="bereaved_present_at_death1"
                       type="radio" value="no">
-                    <label class="nhsuk-label nhsuk-button-radios__label" for="bereaved_present_at_death_no1">
+                    <label class="nhsuk-label nhsuk-radios__label" for="bereaved_present_at_death_no1">
                       No
                     </label>
                   </div>
-                  <div class="nhsuk-button-radios__item">
-                    <input class="nhsuk-button-radios__input" id="bereaved_present_at_death_unknown1" name="bereaved_present_at_death1"
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="bereaved_present_at_death_unknown1" name="bereaved_present_at_death1"
                       type="radio" value="no">
-                    <label class="nhsuk-label nhsuk-button-radios__label" for="bereaved_present_at_death_unknown1">
+                    <label class="nhsuk-label nhsuk-radios__label" for="bereaved_present_at_death_unknown1">
                       Unknown
                     </label>
                   </div>
@@ -302,21 +302,28 @@
             <div class="nhsuk-grid-column-one-half">
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="bereaved_informed1">
-                  Informed
+                  Informed of death?
                 </label>
-                <div class="nhsuk-button-radios">
-                  <div class="nhsuk-button-radios__item">
-                    <input class="nhsuk-button-radios__input" id="bereaved_informed_yes1" name="bereaved_informed1"
-                      type="radio" value="yes">
-                    <label class="nhsuk-label nhsuk-button-radios__label" for="bereaved_informed_yes1">
+                <div class="nhsuk-radios nhsuk-radios--inline">
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="bereaved_informed_yes1" name="bereaved_informed1" type="radio"
+                      value="yes">
+                    <label class="nhsuk-label nhsuk-radios__label" for="bereaved_informed_yes1">
                       Yes
                     </label>
                   </div>
-                  <div class="nhsuk-button-radios__item">
-                    <input class="nhsuk-button-radios__input" id="bereaved_informed_no1" name="bereaved_informed1" type="radio"
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="bereaved_informed_no1" name="bereaved_informed1" type="radio"
                       value="no">
-                    <label class="nhsuk-label nhsuk-button-radios__label" for="bereaved_informed_no1">
+                    <label class="nhsuk-label nhsuk-radios__label" for="bereaved_informed_no1">
                       No
+                    </label>
+                  </div>
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="bereaved_informed_unknown1" name="bereaved_informed1" type="radio"
+                      value="unknown">
+                    <label class="nhsuk-label nhsuk-radios__label" for="bereaved_informed_unknown1">
+                      Unknown
                     </label>
                   </div>
                 </div>
@@ -358,7 +365,7 @@
                           name="appointment1_year" type="number" pattern="[0-9]*">
                       </div>
                     </div>
-                    <div class="nhsuk-date-input__item">
+                    <!-- <div class="nhsuk-date-input__item">
                       <div class="nhsuk-form-group">
                         <label class="nhsuk-label nhsuk-date-input__label" for="appointment1_time">
                           Time
@@ -366,9 +373,19 @@
                         <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="appointment1_time"
                           name="appointment1_time" type="number" pattern="[0-9]*">
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </fieldset>
+              </div>
+            </div>
+          </div>
+          <div class="nhsuk-grid-row">
+            <div class="nhsuk-grid-column-full">
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="appointment_details">
+                  Enter any additional details
+                </label>
+                <textarea class="nhsuk-textarea" id="appointment_details" name="appointment_details" rows="5"></textarea>
               </div>
             </div>
           </div>
@@ -380,17 +397,6 @@
           data-duplicate-to="#representatives" class="nhsuk-button nhsuk-button--primary">
           Add another
         </button>
-      </div>
-
-      <div class="nhsuk-grid-row">
-        <div class="nhsuk-grid-column-full">
-          <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="appointment_details">
-              Enter any additional details
-            </label>
-            <textarea class="nhsuk-textarea" id="appointment_details" name="appointment_details" rows="5"></textarea>
-          </div>
-        </div>
       </div>
 
     </div>
@@ -500,27 +506,27 @@
       <div class="nhsuk-grid-column-one-half">
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="bereaved_present_at_death{number}">
-            Present at death
+            Present at death?
           </label>
-          <div class="nhsuk-button-radios">
-            <div class="nhsuk-button-radios__item">
-              <input class="nhsuk-button-radios__input" id="bereaved_present_at_death_yes{number}" name="bereaved_present_at_death{number}"
+          <div class="nhsuk-radios nhsuk-radios--inline">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="bereaved_present_at_death_yes{number}" name="bereaved_present_at_death{number}"
                 type="radio" value="yes">
-              <label class="nhsuk-label nhsuk-button-radios__label" for="bereaved_present_at_death_yes{number}">
+              <label class="nhsuk-label nhsuk-radios__label" for="bereaved_present_at_death_yes{number}">
                 Yes
               </label>
             </div>
-            <div class="nhsuk-button-radios__item">
-              <input class="nhsuk-button-radios__input" id="bereaved_present_at_death_no{number}" name="bereaved_present_at_death{number}"
-                type="radio" value="no" checked>
-              <label class="nhsuk-label nhsuk-button-radios__label" for="bereaved_present_at_death_no{number}">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="bereaved_present_at_death_no{number}" name="bereaved_present_at_death{number}"
+                type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="bereaved_present_at_death_no{number}">
                 No
               </label>
             </div>
-            <div class="nhsuk-button-radios__item">
-              <input class="nhsuk-button-radios__input" id="bereaved_present_at_death_unknown{number}" name="bereaved_present_at_death{number}"
-                type="radio" value="no">
-              <label class="nhsuk-label nhsuk-button-radios__label" for="bereaved_present_at_death_unknown{number}">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="bereaved_present_at_death_unknown{number}" name="bereaved_present_at_death{number}"
+                type="radio" value="unknown">
+              <label class="nhsuk-label nhsuk-radios__label" for="bereaved_present_at_death_unknown{number}">
                 Unknown
               </label>
             </div>
@@ -540,21 +546,28 @@
       <div class="nhsuk-grid-column-one-half">
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="bereaved_informed{number}">
-            Informed
+            Informed of death?
           </label>
-          <div class="nhsuk-button-radios">
-            <div class="nhsuk-button-radios__item">
-              <input class="nhsuk-button-radios__input" id="bereaved_informed_yes{number}" name="bereaved_informed{number}"
+          <div class="nhsuk-radios nhsuk-radios--inline">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="bereaved_informed_yes{number}" name="bereaved_informed{number}"
                 type="radio" value="yes">
-              <label class="nhsuk-label nhsuk-button-radios__label" for="bereaved_informed_yes{number}">
+              <label class="nhsuk-label nhsuk-radios__label" for="bereaved_informed_yes{number}">
                 Yes
               </label>
             </div>
-            <div class="nhsuk-button-radios__item">
-              <input class="nhsuk-button-radios__input" id="bereaved_informed_no{number}" name="bereaved_informed{number}"
-                type="radio" value="no" checked>
-              <label class="nhsuk-label nhsuk-button-radios__label" for="bereaved_informed_no{number}">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="bereaved_informed_no{number}" name="bereaved_informed{number}"
+                type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="bereaved_informed_no{number}">
                 No
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="bereaved_informed_unknown{number}" name="bereaved_informed{number}"
+                type="radio" value="unknown">
+              <label class="nhsuk-label nhsuk-radios__label" for="bereaved_informed_unknown{number}">
+                Unknown
               </label>
             </div>
           </div>
@@ -596,7 +609,7 @@
                     name="appointment{number}_year" type="number" pattern="[0-9]*">
                 </div>
               </div>
-              <div class="nhsuk-date-input__item">
+              <!-- <div class="nhsuk-date-input__item">
                 <div class="nhsuk-form-group">
                   <label class="nhsuk-label nhsuk-date-input__label" for="appointment{number}_time">
                     Time
@@ -604,10 +617,17 @@
                   <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="appointment{number}_time"
                     name="appointment{number}_time" type="number" pattern="[0-9]*">
                 </div>
-              </div>
+              </div> -->
             </div>
           </fieldset>
         </div>
+      </div>
+    </div>
+    <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+      <div class="nhsuk-grid-column-full">
+        <button class="nhsuk-button nhsuk-button--secondary" data-remove-element="#representative{number}">
+          Remove above
+        </button>
       </div>
     </div>
   </div>
