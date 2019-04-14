@@ -151,7 +151,7 @@
               <legend class="nhsuk-fieldset__legend">
                 Does the patient have any devices implanted that could cause issues at cremation?
               </legend>
-              <div class="nhsuk-radios">
+              <div class="nhsuk-radios nhsuk-radios--inline">
                 <div class="nhsuk-radios__item">
                   <input class="nhsuk-radios__input" id="cremation_issues_yes" name="cremation_issues" type="radio"
                     value="yes">
@@ -164,6 +164,13 @@
                     value="no">
                   <label class="nhsuk-label nhsuk-radios__label" for="cremation_issues_no">
                     No
+                  </label>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="cremation_issues_unknown" name="cremation_issues" type="radio"
+                    value="unknown">
+                  <label class="nhsuk-label nhsuk-radios__label" for="cremation_issues_unknown">
+                    Unknown
                   </label>
                 </div>
               </div>
@@ -199,7 +206,7 @@
               <span class="nhsuk-hint">
                 Is there any property to collect from the ward?
               </span>
-              <div class="nhsuk-radios">
+              <div class="nhsuk-radios nhsuk-radios--inline">
                 <div class="nhsuk-radios__item">
                   <input class="nhsuk-radios__input" id="personal_effects_yes" name="personal_effects" type="radio"
                     value="yes">
@@ -212,6 +219,13 @@
                     value="no">
                   <label class="nhsuk-label nhsuk-radios__label" for="personal_effects_no">
                     No
+                  </label>
+                </div>
+                <div class="nhsuk-radios__item">
+                  <input class="nhsuk-radios__input" id="personal_effects_unknown" name="personal_effects" type="radio"
+                    value="unknown">
+                  <label class="nhsuk-label nhsuk-radios__label" for="personal_effects_unknown">
+                    Unknown
                   </label>
                 </div>
               </div>
@@ -237,6 +251,8 @@
     <div class="nhsuk-main-wrapper">
 
       <h3>Bereaved or representative information</h3>
+
+      <p>Enter information regarding the patient's bereaved family or representative handling their affairs.</p>
 
       <div id="representatives">
         <div class="representative" id="representative1">

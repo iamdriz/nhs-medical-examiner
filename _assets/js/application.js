@@ -250,3 +250,33 @@ $(document).on('change', '[name="rep"]', function () {
     rep2.removeClass(cssClass);
   }
 });
+
+// assign me/meo
+$(document).on('change', '[name="team_me"], [name="team_meo"]', function () {
+  var me = $('#team_me');
+  var meo = $('#team_meo');
+  var assign1_template = $('#assign1-template').clone().html();
+  var assign2_template = $('#assign2-template').clone().html();
+  if( me.val() != '' || meo.val() != '') {
+    if(me.val() !='' && meo.val() == '')
+      var assign1 = me.val();
+    if(me.val() == '' && meo.val() != '')
+      var assign1 = meo.val();
+    var legend = 'Are you sure you would like to assign <b>' + assign1 + '</b> to this case?';
+    if( me.val() != '' && meo.val() != '')
+      var legend = 'Are you sure you would like to assign <b>' + me.val() +'</b> and <b>' + meo.val() + '</b> to this case?';
+    assign2_template = assign2_template.replace(/{legend}/g, legend);
+    $('#assignment').html(assign2_template);
+  } else {
+    $('#assignment').html(assign1_template);
+  }
+});
+
+// enable button for me/meo assignment
+$(document).on('change', '[name="assign_me"]', function () {
+  var button = $('[data-assign-continue]');
+  if ($(this).val() == 'yes')
+    $(button).removeAttr('disabled');
+  else
+    $(button).attr('disabled', 'disabled');
+});

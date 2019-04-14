@@ -65,7 +65,7 @@
       <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
         <div class="nhsuk-grid-column-full">
           <button data-duplicate-element=".consultant" data-duplicate-from="#consultant-template" data-duplicate-to="#consultants"
-           class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
+            class="nhsuk-button nhsuk-button--primary nhsuk-u-margin-right-4">
             Add another consultant
           </button>
           <!--<button class="nhsuk-button nhsuk-button--secondary" data-remove-element=".consultant" data-remove-from="#consultants">
@@ -184,12 +184,14 @@
   <div class="nhsuk-width-container">
     <div class="nhsuk-main-wrapper">
 
+      <h3 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-3">Nursing team information</h3>
+
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-full">
           <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="nursing_team_information">
+            <!--<label class="nhsuk-label" for="nursing_team_information">
               Nursing team information
-            </label>
+            </label>-->
             <span class="nhsuk-hint">
               Add any relevant information about the nursing team involved in care
             </span>
@@ -209,48 +211,81 @@
     <div class="nhsuk-main-wrapper">
 
       <h3 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-3">Medical Examiner Team</h3>
+      <p>The team assigned to work on this case</p>
 
-      <div class="nhsuk-grid-row nhsuk-u-margin-top-6">
+      <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
         <div class="nhsuk-grid-column-one-half">
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="team_me">
-              Assign ME
+              MEO assigned to case
             </label>
             <select class="nhsuk-select" id="team_me" name="team_me">
-              <option value="" selected>Please select</option>
-              <option value="me1">ME 1</option>
-              <option value="me2">ME 2</option>
-              <option value="me3">ME 3</option>
+              <option value="" selected>Select an MEO</option>
+              <option value="Joan Smith">Joan Smith</option>
             </select>
           </div>
         </div>
         <div class="nhsuk-grid-column-one-half">
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="team_meo">
-              Assign MEO
+              ME assigned to case
             </label>
             <select class="nhsuk-select" id="team_meo" name="team_meo">
-              <option value="" selected>Please select</option>
-              <option value="meo1">MEO 1</option>
-              <option value="meo2">MEO 2</option>
-              <option value="meo3">MEO 3</option>
+              <option value="" selected>Select an ME</option>
+              <option value="Dr Alan Wyn Joans">Dr Alan Wyn Joans</option>
+              <option value="Dr Frank Brunu">Dr Frank Brunu</option>
+              <option value="Dr Tia Sanchez">Dr Tia Sanchez</option>
             </select>
           </div>
         </div>
       </div>
 
-      <div class="nhsuk-grid-row nhsuk-u-margin-top-3">
-        <div class="nhsuk-grid-column-full">
-          <button class="nhsuk-button nhsuk-button--primary">
-            Confirm
-          </button>
-        </div>
+      <div id="assignment">
+        <p class="gray">An ME should only be assigned once the case is ready for them and the Latest admission notes and MEO summary
+          have been added to the Case breakdown.</p>
       </div>
 
     </div>
   </div>
 
 </section>
+
+<template id="assign1-template">
+  <p class="gray">An ME should only be assigned once the case is ready for them and the Latest admission notes and MEO summary
+    have been added to the Case breakdown.</p>
+</template>
+
+<template id="assign2-template">
+  <div class="nhsuk-form-group">
+    <fieldset class="nhsuk-fieldset">
+      <legend class="nhsuk-fieldset__legend">
+        {legend}
+      </legend>
+      <div class="nhsuk-radios nhsuk-radios--inline">
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="assign_me_yes" name="assign_me" type="radio" value="yes">
+          <label class="nhsuk-label nhsuk-radios__label" for="assign_me_yes">
+            Yes
+          </label>
+        </div>
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="assign_me_no" name="assign_me" type="radio" value="no">
+          <label class="nhsuk-label nhsuk-radios__label" for="assign_me_no">
+            No
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  <p class="gray">They will receive a notification email informing them of this assignment.</p>
+  <div class="nhsuk-grid-row nhsuk-u-margin-top-3">
+    <div class="nhsuk-grid-column-full">
+      <button class="nhsuk-button nhsuk-button--primary" data-assign-continue disabled>
+        Continue
+      </button>
+    </div>
+  </div>
+</template>
 
 <template id="consultant-template">
   <div class="consultant nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6" id="consultant{number}">
