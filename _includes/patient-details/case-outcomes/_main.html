@@ -30,7 +30,8 @@
         </div>
         <div class="nhsuk-box__right">
           <div class="nhsuk-text-align-center">
-            <h2>MCCD TO BE ISSUED</h2>
+            <h2>CORONER REFERRAL</h2>
+            <h4 class="gray">FOR PERMISSION TO ISSUE MCCD FOR 100A</h4>
           </div>
         </div>
       </div>
@@ -360,13 +361,14 @@
     <div class="nhsuk-main-wrapper">
 
       <h2 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-3">Outstanding case items</h2>
-      <p class="nhsuk-u-margin-bottom-6">Following completion of scrutiny, the below should be actioned before a case
+      <p class="gray nhsuk-u-margin-bottom-6">Following completion of scrutiny, the below should be actioned before a
+        case
         can be closed.</p>
 
       <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
         <div class="nhsuk-grid-column-full">
           <h3>MCCD</h3>
-          <p>Please select if an MCCD has been written and issued to the patient's representative.</p>
+          <p class="gray">Please select if an MCCD has been written and issued to the patient's representative.</p>
           <div class="nhsuk-checkboxes">
             <div class="nhsuk-checkboxes__item">
               <input class="nhsuk-checkboxes__input" id="mccd_issued" name="mccd_issued" type="checkbox" value="">
@@ -381,7 +383,7 @@
       <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
         <div class="nhsuk-grid-column-full">
           <h3>Cremation form</h3>
-          <p>Has a cremation form been completed for this death?</p>
+          <p class="gray">Has a cremation form been completed for this death?</p>
           <div class="nhsuk-radios nhsuk-radios--inline">
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="cremation_form_yes" name="cremation_form" type="radio" value="yes">
@@ -395,6 +397,12 @@
                 No
               </label>
             </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="cremation_form_unknown" name="cremation_form" type="radio" value="unknown">
+              <label class="nhsuk-label nhsuk-radios__label" for="cremation_form_unknown">
+                Not yet known
+              </label>
+            </div>
           </div>
         </div>
       </div>
@@ -402,7 +410,7 @@
       <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
         <div class="nhsuk-grid-column-full">
           <h3>GP notification</h3>
-          <p>Has the patient's GP been notified of the cause of death?</p>
+          <p class="gray">Has the patient's GP been notified of the cause of death?</p>
           <div class="nhsuk-radios nhsuk-radios--inline">
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="gp_notification" name="gp_notification" type="checkbox" value="">
@@ -414,6 +422,12 @@
               <input class="nhsuk-radios__input" id="gp_notification2" name="gp_notification" type="checkbox" value="">
               <label class="nhsuk-label nhsuk-radios__label" for="gp_notification2">
                 GP unable to be notified
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="gp_notification3" name="gp_notification" type="checkbox" value="">
+              <label class="nhsuk-label nhsuk-radios__label" for="gp_notification3">
+                N/A
               </label>
             </div>
           </div>
