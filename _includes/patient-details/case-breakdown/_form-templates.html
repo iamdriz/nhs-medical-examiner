@@ -263,19 +263,22 @@
           </span>
           <div class="nhsuk-radios nhsuk-radios--inline">
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="clinical_governance_review_yes" name="clinical_governance_review" type="radio" value="yes">
+              <input class="nhsuk-radios__input" id="clinical_governance_review_yes" name="clinical_governance_review"
+                type="radio" value="yes">
               <label class="nhsuk-label nhsuk-radios__label" for="clinical_governance_review_yes">
                 Yes
               </label>
             </div>
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="clinical_governance_review_no" name="clinical_governance_review" type="radio" value="no">
+              <input class="nhsuk-radios__input" id="clinical_governance_review_no" name="clinical_governance_review"
+                type="radio" value="no">
               <label class="nhsuk-label nhsuk-radios__label" for="clinical_governance_review_no">
                 No
               </label>
             </div>
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="clinical_governance_review_unknown" name="clinical_governance_review" type="radio" value="unknown">
+              <input class="nhsuk-radios__input" id="clinical_governance_review_unknown" name="clinical_governance_review"
+                type="radio" value="unknown">
               <label class="nhsuk-label nhsuk-radios__label" for="clinical_governance_review_unknown">
                 Unknown
               </label>
@@ -284,7 +287,8 @@
         </fieldset>
       </div>
       <div class="nhsuk-form-group nhsuk-form-group--hidden">
-        <textarea class="nhsuk-textarea" id="clinical_governance_review_notes" name="clinical_governance_review_notes" rows="5"></textarea>
+        <textarea class="nhsuk-textarea" id="clinical_governance_review_notes" name="clinical_governance_review_notes"
+          rows="5"></textarea>
       </div>
     </div>
   </div>
@@ -696,34 +700,60 @@
       </div>
     </div>
   </div>
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-full">
-      <div class="nhsuk-form-group">
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend">
-            What was decided about the cause of death?
-          </legend>
-          <div class="nhsuk-radios">
-            <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
-              <input class="nhsuk-radios__input" id="cause_of_death1" name="cause_of_death" type="radio" value="">
-              <label class="nhsuk-label nhsuk-radios__label" for="cause_of_death1">
-                Cause of death provided by the QAP before scrutiny accepted without change
-              </label>
+  <div class="nhsuk-conditional">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-form-group nhsuk-u-margin-bottom-0">
+          <fieldset class="nhsuk-fieldset">
+            <div class="nhsuk-radios">
+              <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
+                <input class="nhsuk-radios__input" id="cause_of_death1" name="cause_of_death" type="radio" value="">
+                <label class="nhsuk-label nhsuk-radios__label" for="cause_of_death1">
+                  For permission to issue an MCCD with 100a
+                </label>
+              </div>
+              <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
+                <input class="nhsuk-radios__input" id="cause_of_death2" name="cause_of_death" type="radio" value="">
+                <label class="nhsuk-label nhsuk-radios__label" for="cause_of_death2">
+                  For an investigation
+                </label>
+              </div>
             </div>
-            <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
-              <input class="nhsuk-radios__input" id="cause_of_death2" name="cause_of_death" type="radio" value="">
-              <label class="nhsuk-label nhsuk-radios__label" for="cause_of_death2">
-                Cause of death established by ME accepted by QAP
-              </label>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nhsuk-conditional">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-full">
+        <div class="nhsuk-form-group nhsuk-u-margin-bottom-0">
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-u-margin-bottom-4 gray">
+              What was decided about the cause of death?
+            </legend>
+            <div class="nhsuk-radios">
+              <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
+                <input class="nhsuk-radios__input" id="cause_of_death1" name="cause_of_death" type="radio" value="">
+                <label class="nhsuk-label nhsuk-radios__label" for="cause_of_death1">
+                  Cause of death provided by the QAP before scrutiny accepted without change
+                </label>
+              </div>
+              <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
+                <input class="nhsuk-radios__input" id="cause_of_death2" name="cause_of_death" type="radio" value="">
+                <label class="nhsuk-label nhsuk-radios__label" for="cause_of_death2">
+                  Cause of death established by ME accepted by QAP
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="cause_of_death3" name="cause_of_death" type="radio" value="">
+                <label class="nhsuk-label nhsuk-radios__label" for="cause_of_death3">
+                  ME and QAP have agreed a new cause of death
+                </label>
+              </div>
             </div>
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="cause_of_death3" name="cause_of_death" type="radio" value="">
-              <label class="nhsuk-label nhsuk-radios__label" for="cause_of_death3">
-                ME and QAP have agreed a new cause of death
-              </label>
-            </div>
-          </div>
-        </fieldset>
+          </fieldset>
+        </div>
       </div>
     </div>
   </div>
