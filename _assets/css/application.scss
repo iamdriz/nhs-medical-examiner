@@ -24,6 +24,15 @@
   border-radius: 0;
 }
 
+.nhsuk-input-optional {
+  color: #005eb8;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.nhsuk-input-required {
+  outline: #005eb8 2px solid;
+}
+
 .nhsuk-form-group--hidden {
   display: none;
 }

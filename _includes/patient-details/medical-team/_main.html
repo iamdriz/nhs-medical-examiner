@@ -6,7 +6,7 @@
     <div class="nhsuk-main-wrapper">
 
       <h2 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-3">Medical team</h2>
-      <h3 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">Consultants information</h3>
+      <h3 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">Doctor(s) information</h3>
 
       <div id="consultants">
         <!-- CONSULTANT 1 -->
@@ -15,9 +15,10 @@
             <div class="nhsuk-grid-column-one-half">
               <div class="nhsuk-form-group">
                 <label class="nhsuk-label" for="consultant1_name">
-                  Consultant responsible for care
+                  Consultant or GP in charge of care
                 </label>
-                <input class="nhsuk-input" id="consultant1_name" name="consultant1_name" type="text">
+                <input class="nhsuk-input nhsuk-input-required" id="consultant1_name" name="consultant1_name" type="text">
+                <div class="nhsuk-input-optional">Required field</div>
               </div>
             </div>
             <div class="nhsuk-grid-column-one-half">
@@ -134,7 +135,7 @@
     <div class="nhsuk-main-wrapper">
 
       <h3 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-3">QAP information</h3>
-      <h4 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">Enter the details of the doctor who will be writing the
+      <p class="gray nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">Enter the details of the doctor who will be writing the
         MCCD</h4>
 
       <div class="nhsuk-grid-row">
@@ -149,7 +150,7 @@
         <div class="nhsuk-grid-column-one-half">
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="qap_role">
-              Role
+              Surgery contact number
             </label>
             <input class="nhsuk-input" id="qap_role" name="qap_role" type="text">
           </div>
@@ -159,7 +160,7 @@
         <div class="nhsuk-grid-column-one-half">
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="qap_organisation">
-              Organisation
+              Surgery
             </label>
             <input class="nhsuk-input" id="qap_organisation" name="qap_organisation" type="text">
           </div>
@@ -167,7 +168,7 @@
         <div class="nhsuk-grid-column-one-half">
           <div class="nhsuk-form-group">
             <label class="nhsuk-label" for="qap_number">
-              Personal phone / bleep number
+              Surgery address
             </label>
             <input class="nhsuk-input" id="qap_number" name="qap_number" type="text">
           </div>
@@ -185,6 +186,7 @@
     <div class="nhsuk-main-wrapper">
 
       <h3 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-3">Nursing team information</h3>
+      <p class="gray nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">Add any relevant information about the nursing team involved in care</p>
 
       <div class="nhsuk-grid-row">
         <div class="nhsuk-grid-column-full">
@@ -192,9 +194,6 @@
             <!--<label class="nhsuk-label" for="nursing_team_information">
               Nursing team information
             </label>-->
-            <span class="nhsuk-hint">
-              Add any relevant information about the nursing team involved in care
-            </span>
             <textarea class="nhsuk-textarea" id="nursing_team_information" name="nursing_team_information" rows="5"></textarea>
           </div>
         </div>
@@ -211,7 +210,7 @@
     <div class="nhsuk-main-wrapper">
 
       <h3 class="nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-3">Medical Examiner Team</h3>
-      <p>The team assigned to work on this case</p>
+      <p class="gray nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-6">The team assigned to work on this case</p>
 
       <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
         <div class="nhsuk-grid-column-one-half">
@@ -293,9 +292,10 @@
       <div class="nhsuk-grid-column-one-half">
         <div class="nhsuk-form-group">
           <label class="nhsuk-label" for="consultant{number}_name">
-            Consultant responsible for care
+            Consultant or GP in charge of care
           </label>
-          <input class="nhsuk-input" id="consultant{number}_name" name="consultant{number}_name" type="text">
+          <input class="nhsuk-input nhsuk-input-required" id="consultant{number}_name" name="consultant{number}_name" type="text">
+          <div class="nhsuk-input-optional">Required field</div>
         </div>
       </div>
       <div class="nhsuk-grid-column-one-half">
