@@ -993,7 +993,7 @@
   {% include patient-details/case-breakdown/_proposed-cause-of-death.html %}
 
 
-  <h3>Details of the discussion with the bereaved</h3>
+  <h3>Details of the discussion</h3>
   <div class="nhsuk-form-group">
     <!-- <label class="nhsuk-label" for="summary_of_discussion">
       Details of discussion with QAP and ME
@@ -1003,11 +1003,12 @@
 
   <div class="nhsuk-grid-row nhsuk-u-margin-top-3 nhsuk-u-margin-bottom-3">
     <div class="nhsuk-grid-column-full">
+      <h3 class="nhsuk-u-margin-bottom-1">Outcome</h3>
       <div class="nhsuk-form-group">
         <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend">
+          <!--<legend class="nhsuk-fieldset__legend">
             Outcome
-          </legend>
+          </legend>-->
           <span class="nhsuk-hint">
             What as the ultimate outcome of the conversation with the family member of representative?
           </span>
@@ -1015,45 +1016,51 @@
             <div class="nhsuk-grid-row">
               <div class="nhsuk-grid-column-one-half">
                 <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
-                  <input class="nhsuk-radios__input" id="funeral_arrangements_cremation" name="funeral_arrangements"
-                    type="radio" value="cremation">
-                  <label class="nhsuk-label nhsuk-radios__label" for="funeral_arrangements_cremation">
+                  <input class="nhsuk-radios__input" id="outcome_of_conversation1" name="outcome_of_conversation"
+                    type="radio" value="no_concern">
+                  <label class="nhsuk-label nhsuk-radios__label" for="outcome_of_conversation1">
                     Cause of death accepted without concerns
                   </label>
                 </div>
               </div>
               <div class="nhsuk-grid-column-one-half">
                 <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
-                  <input class="nhsuk-radios__input" id="funeral_arrangements_buried_at_sea" name="funeral_arrangements"
-                    type="radio" value="buried_at_sea">
-                  <label class="nhsuk-label nhsuk-radios__label" for="funeral_arrangements_buried_at_sea">
-                    Concerns raised
-                  </label>
-                </div>
-              </div>
-            </div>
-            <div class="nhsuk-grid-row">
-              <div class="nhsuk-grid-column-one-half">
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="funeral_arrangements_burial" name="funeral_arrangements" type="radio"
-                    value="burial">
-                  <label class="nhsuk-label nhsuk-radios__label" for="funeral_arrangements_burial">
-                    Concerns raised indicate coroner involvement
-                  </label>
-                </div>
-              </div>
-              <div class="nhsuk-grid-column-one-half">
-                <div class="nhsuk-radios__item">
-                  <input class="nhsuk-radios__input" id="funeral_arrangements_repatriation" name="funeral_arrangements"
-                    type="radio" value="repatriation">
-                  <label class="nhsuk-label nhsuk-radios__label" for="funeral_arrangements_repatriation">
-                    Concerns raised about quality of care
+                  <input class="nhsuk-radios__input" id="outcome_of_conversation2" name="outcome_of_conversation"
+                    type="radio" value="concerns_were_raised">
+                  <label class="nhsuk-label nhsuk-radios__label" for="outcome_of_conversation2">
+                    Concerns were raised
                   </label>
                 </div>
               </div>
             </div>
           </div>
         </fieldset>
+      </div>
+      <div class="nhsuk-conditional hide" id="concerns-were-raised">
+        <div class="nhsuk-form-group nhsuk-u-margin-bottom-0">
+          <fieldset class="nhsuk-fieldset">
+            <div class="nhsuk-radios">
+              <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
+                <input class="nhsuk-radios__input" id="cause_of_death1" name="cause_of_death" type="radio" value="">
+                <label class="nhsuk-label nhsuk-radios__label" for="cause_of_death1">
+                  That indicate a coronial investigation
+                </label>
+              </div>
+              <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
+                <input class="nhsuk-radios__input" id="cause_of_death2" name="cause_of_death" type="radio" value="">
+                <label class="nhsuk-label nhsuk-radios__label" for="cause_of_death2">
+                  That indicate a requirement for a 100a
+                </label>
+              </div>
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="cause_of_death3" name="cause_of_death" type="radio" value="">
+                <label class="nhsuk-label nhsuk-radios__label" for="cause_of_death3">
+                  But were addressed by the Medical Examiner with no coroner involvement required
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
       </div>
     </div>
   </div>

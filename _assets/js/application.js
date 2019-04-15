@@ -292,3 +292,15 @@ $(document).on('change', '[name="clinical_governance_review"]', function () {
   else
     formGroup.addClass(cssClass);
 });
+
+// concerns were raised
+$(document).on('change', '[name="outcome_of_conversation"]', function () {
+  var element = $(this);
+  var cwr = $('#concerns-were-raised');
+  var cssClass = 'hide';
+  if (element.val() == 'concerns_were_raised') {
+    cwr.removeClass(cssClass);
+  } else {
+    cwr.addClass(cssClass);
+  }
+});
