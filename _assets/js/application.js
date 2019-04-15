@@ -280,3 +280,15 @@ $(document).on('change', '[name="assign_me"]', function () {
   else
     $(button).attr('disabled', 'disabled');
 });
+
+
+// meo summary
+$(document).on('change', '[name="clinical_governance_review"]', function () {
+  var element = $(this);
+  var formGroup = $('#clinical_governance_review_notes').parents('.nhsuk-form-group');
+  var cssClass = 'nhsuk-form-group--hidden';
+  if (element.val() == 'yes')
+    formGroup.removeClass(cssClass);
+  else
+    formGroup.addClass(cssClass);
+});
