@@ -50,14 +50,14 @@ $(document).on('change', '#me_qap_decision2,#me_qap_decision1', function () {
 
     if (me_qap_decision === "coroner")
     {
-        $('#me_qap_decision1-show').hide();
-        $('#me_qap_decision2-show').show();
+        $('#me_qap_decision1-show').show();
+        $('#me_qap_decision2-show').hide();
     }
 
     if (me_qap_decision === "mccd")
     {
-        $('#me_qap_decision1-show').show();
-        $('#me_qap_decision2-show').hide();
+        $('#me_qap_decision1-show').hide();
+        $('#me_qap_decision2-show').show();
     }
 });
 
