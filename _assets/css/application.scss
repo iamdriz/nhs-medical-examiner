@@ -18,13 +18,14 @@
 }
 
 .case-added-message {
+  display: flex;
+  align-items: center;
   .nhsuk-icon {
-    top: 6px;
-    position: relative;
+    margin-right: 10px;
   }
-
+  font-size: 18px;
   color: #007f3b;
-  padding-bottom: 20px;
+  margin-bottom: 36px;
 }
 
 .nhsuk-select {
@@ -912,4 +913,20 @@
 
 .gray {
   color: #425563;
+}
+
+.feedback {
+  background: #345a9b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: -1px;
+  position: relative;
+  z-index: 100;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  a {
+    color: #ffffff;
+  }
 }
