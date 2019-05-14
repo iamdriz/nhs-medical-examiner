@@ -137,24 +137,49 @@
     @media (min-width: 61.875em) {
       width: 25%;
       padding-left: 40px;
-      padding-right: 40px;
     }
     font-size: 14px;
-
     .nhsuk-icon {
       margin-right: 8px;
+      flex-shrink: 0;
     }
-
+  }
+  &.checklist--top {
+    .checklist__item {
+      @media (min-width: 61.875em) {
+        padding-right: 40px;
+        &:after {
+          content: '→';
+          font-size: 24px;
+          position: absolute;
+          right: -10px;
+          color: #345a9b;
+        }
+        &:last-child:after {
+          content: none;
+        }
+      }
+    }
+  }
+  &.checklist--bottom {
+    color: #999999;
     @media (min-width: 61.875em) {
-      &:after {
-        content: '→';
+      padding-top: 30px;
+      .checklist__item:first-child:after {
+        content: '↑';
         font-size: 24px;
         position: absolute;
-        right: -10px;
+        top: -40px;
+        left: 50px;
         color: #345a9b;
       }
-      &:last-child:after {
-        content: none;
+      .checklist__item:last-child:after {
+        content: '↓';
+        font-size: 24px;
+        position: absolute;
+        top: -40px;
+        right: 50px;
+        color: #345a9b;
       }
     }
   }
@@ -929,4 +954,8 @@
   a {
     color: #ffffff;
   }
+}
+
+.underlined {
+  text-decoration: underline;
 }
