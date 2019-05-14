@@ -33,33 +33,36 @@
           <button class="nhsuk-button">
             Find address
           </button>
+          {% if pt %}
+          {% else %}
           <div class="nhsuk-u-margin-top-0">
             <a data-show="#address-box" class="js-link">I don't know the postcode</a>
           </div>
+          {% endif %}
         </div>
       </div>
 
-      <div id="address-box" class="hide">
+      <div id="address-box" class="{% if pt %}{% else %}hide{% endif %}">
         <div class="nhsuk-grid-row nhsuk-u-margin-top-6 nhsuk-u-margin-bottom-6">
           <div class="nhsuk-grid-column-one-half">
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="address_building">
                 Building and street
               </label>
-              <input class="nhsuk-input nhsuk-u-margin-bottom-3" id="address_building" name="address_building" type="text">
+              <input class="nhsuk-input nhsuk-u-margin-bottom-3" id="address_building" name="address_building" type="text" value="{% if pt %}19 Gordon Street{% endif %}">
               <input class="nhsuk-input" id="address_street" name="address_street" type="text">
             </div>
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="address_town">
                 Town or city
               </label>
-              <input class="nhsuk-input" id="address_town" name="address_town" type="text">
+              <input class="nhsuk-input" id="address_town" name="address_town" type="text" value="{% if pt %}Gloucester{% endif %}">
             </div>
             <div class="nhsuk-form-group">
               <label class="nhsuk-label" for="address_county">
                 County
               </label>
-              <input class="nhsuk-input" id="address_county" name="address_county" type="text">
+              <input class="nhsuk-input" id="address_county" name="address_county" type="text" value="{% if pt %}Gloucestershire{% endif %}">
             </div>
           </div>
         </div>
@@ -85,7 +88,7 @@
             <label class="nhsuk-label" for="organisation_responsible">
               Organisation responsible for care prior to death
             </label>
-            <input class="nhsuk-input" id="organisation_responsible" name="organisation_responsible" type="text">
+            <input class="nhsuk-input" id="organisation_responsible" name="organisation_responsible" type="text" value="{% if pt %}N/A{% endif %}">
           </div>
         </div>
       </div>
@@ -102,7 +105,7 @@
                   <div class="nhsuk-grid-column-one-quarter">
                     <div class="nhsuk-radios__item nhsuk-u-margin-bottom-2">
                       <input class="nhsuk-radios__input" id="funeral_arrangements_cremation" name="funeral_arrangements"
-                        type="radio" value="cremation">
+                        type="radio" value="cremation"{% if pt %} checked {% endif %}>
                       <label class="nhsuk-label nhsuk-radios__label" for="funeral_arrangements_cremation">
                         Cremation
                       </label>
@@ -163,7 +166,7 @@
               <div class="nhsuk-radios nhsuk-radios--inline">
                 <div class="nhsuk-radios__item">
                   <input class="nhsuk-radios__input" id="cremation_issues_yes" name="cremation_issues" type="radio"
-                    value="yes">
+                    value="yes"{% if pt %} checked{% endif %}>
                   <label class="nhsuk-label nhsuk-radios__label" for="cremation_issues_yes">
                     Yes
                   </label>
@@ -185,11 +188,11 @@
               </div>
             </fieldset>
           </div>
-          <div class="nhsuk-form-group nhsuk-form-group--hidden">
+          <div class="nhsuk-form-group {% if pt %}{% else %}nhsuk-form-group--hidden{% endif %}">
             <label class="nhsuk-label" for="cremation_issues_details">
               Enter details below
             </label>
-            <textarea class="nhsuk-textarea" id="cremation_issues_details" name="cremation_issues_details" rows="5"></textarea>
+            <textarea class="nhsuk-textarea" id="cremation_issues_details" name="cremation_issues_details" rows="5">{% if pt %}Patient has an implantable cardiac defibrilator (ICD) for which they have worn for 5 years.{% endif %}</textarea>
           </div>
         </div>
       </div>
@@ -200,7 +203,7 @@
             <label class="nhsuk-label" for="funeral_directors">
               Funeral directors
             </label>
-            <input class="nhsuk-input" id="funeral_directors" name="funeral_directors" type="text">
+            <input class="nhsuk-input" id="funeral_directors" name="funeral_directors" type="text" value="{% if pt %}Marsh and Parsons funderal directors{% endif %}">
           </div>
         </div>
       </div>
@@ -218,7 +221,7 @@
               <div class="nhsuk-radios nhsuk-radios--inline">
                 <div class="nhsuk-radios__item">
                   <input class="nhsuk-radios__input" id="personal_effects_yes" name="personal_effects" type="radio"
-                    value="yes">
+                    value="yes"{% if pt %} checked{% endif %}>
                   <label class="nhsuk-label nhsuk-radios__label" for="personal_effects_yes">
                     Yes
                   </label>
@@ -240,11 +243,11 @@
               </div>
             </fieldset>
           </div>
-          <div class="nhsuk-form-group nhsuk-form-group--hidden">
+          <div class="nhsuk-form-group {% if pt %}{% else %}nhsuk-form-group--hidden{% endif %}">
             <label class="nhsuk-label" for="personal_effects_details">
               Enter details below
             </label>
-            <textarea class="nhsuk-textarea" id="personal_effects_details" name="personal_effects_details" rows="5"></textarea>
+            <textarea class="nhsuk-textarea" id="personal_effects_details" name="personal_effects_details" rows="5">{% if pt %}Patient has been in hospital for a while, has 2 small bags to collect containing valuables such as an iPad.{% endif %}</textarea>
           </div>
         </div>
       </div>
@@ -271,7 +274,7 @@
                 <label class="nhsuk-label" for="bereaved_name1">
                   Full name
                 </label>
-                <input class="nhsuk-input" id="bereaved_name1" name="bereaved_name1" type="text">
+                <input class="nhsuk-input" id="bereaved_name1" name="bereaved_name1" type="text" value="{% if pt %}Stacey Dash{% endif %}">
               </div>
             </div>
           </div>
@@ -281,7 +284,7 @@
                 <label class="nhsuk-label" for="bereaved_relationship1">
                   Relationship
                 </label>
-                <input class="nhsuk-input" id="bereaved_relationship1" name="bereaved_relationship1" type="text">
+                <input class="nhsuk-input" id="bereaved_relationship1" name="bereaved_relationship1" type="text" value="{% if pt %}Sister{% endif %}">
               </div>
             </div>
             <div class="nhsuk-grid-column-one-half">
@@ -299,7 +302,7 @@
                   </div>
                   <div class="nhsuk-radios__item">
                     <input class="nhsuk-radios__input" id="bereaved_present_at_death_no1" name="bereaved_present_at_death1"
-                      type="radio" value="no">
+                      type="radio" value="no"{% if pt %} checked{% endif %}>
                     <label class="nhsuk-label nhsuk-radios__label" for="bereaved_present_at_death_no1">
                       No
                     </label>
@@ -321,7 +324,7 @@
                 <label class="nhsuk-label" for="bereaved_number1">
                   Phone number
                 </label>
-                <input class="nhsuk-input" id="bereaved_number1" name="bereaved_number1" type="text">
+                <input class="nhsuk-input" id="bereaved_number1" name="bereaved_number1" type="text" value="{% if pt %}07729 742783{% endif %}">
               </div>
             </div>
             <div class="nhsuk-grid-column-one-half">
@@ -332,7 +335,7 @@
                 <div class="nhsuk-radios nhsuk-radios--inline">
                   <div class="nhsuk-radios__item">
                     <input class="nhsuk-radios__input" id="bereaved_informed_yes1" name="bereaved_informed1" type="radio"
-                      value="yes">
+                      value="yes"{% if pt %} checked{% endif %}>
                     <label class="nhsuk-label nhsuk-radios__label" for="bereaved_informed_yes1">
                       Yes
                     </label>
@@ -369,7 +372,7 @@
                           Day
                         </label>
                         <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="appointment1_day"
-                          name="appointment1_day" type="number" pattern="[0-9]*">
+                          name="appointment1_day" type="number" pattern="[0-9]*" value="{% if pt %}31{% endif %}">
                       </div>
                     </div>
                     <div class="nhsuk-date-input__item">
@@ -378,7 +381,7 @@
                           Month
                         </label>
                         <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="appointment1_month"
-                          name="appointment1_month" type="number" pattern="[0-9]*">
+                          name="appointment1_month" type="number" pattern="[0-9]*" value="{% if pt %}01{% endif %}">
                       </div>
                     </div>
                     <div class="nhsuk-date-input__item">
@@ -387,7 +390,7 @@
                           Year
                         </label>
                         <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="appointment1_year"
-                          name="appointment1_year" type="number" pattern="[0-9]*">
+                          name="appointment1_year" type="number" pattern="[0-9]*" value="{% if pt %}2019{% endif %}">
                       </div>
                     </div>
                     <!-- <div class="nhsuk-date-input__item">
@@ -410,7 +413,7 @@
                 <label class="nhsuk-label" for="appointment_details">
                   Enter any additional details
                 </label>
-                <textarea class="nhsuk-textarea" id="appointment_details" name="appointment_details" rows="5"></textarea>
+                <textarea class="nhsuk-textarea" id="appointment_details" name="appointment_details" rows="5">{% if pt %}Family have indicated it may be the older sister, Mary, that collects the certificate. But Stacey wishes to talk to the ME about the patient.{% endif %}</textarea>
               </div>
             </div>
           </div>
@@ -480,7 +483,7 @@
               </div>
               <div class="nhsuk-grid-column-one-third">
                 <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="request_other" name="request" type="checkbox" value="other">
+                  <input class="nhsuk-checkboxes__input" id="request_other" name="request" type="checkbox" value="other"{% if pt %} checked{% endif %}>
                   <label class="nhsuk-label nhsuk-checkboxes__label" for="request_other">
                     Other
                   </label>
@@ -497,7 +500,7 @@
             <label class="nhsuk-label" for="request_details">
               Enter any further relevant details
             </label>
-            <textarea class="nhsuk-textarea" id="request_details" name="request_details" rows="5"></textarea>
+            <textarea class="nhsuk-textarea" id="request_details" name="request_details" rows="5">{% if pt %}Family are going back to Australia at the end of the week, have requested rapid release.{% endif %}</textarea>
           </div>
         </div>
       </div>
